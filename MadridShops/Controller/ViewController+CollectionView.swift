@@ -32,5 +32,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let shop = self.shops?.get(index: indexPath.row)
+        performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
+    }
+    
     
 }
