@@ -129,15 +129,23 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		110DA7581F61E07C009A0BDF /* Interactor */ = {
+		110A44CA1F701A0000E05460 /* NetworkInteractor */ = {
 			isa = PBXGroup;
 			children = (
-				11FDD4261F6F9C3700C94C72 /* CacheInteractor */,
 				110DA7591F61E127009A0BDF /* DownloadAllShopsInteractor.swift */,
-				11889ACD1F6292B4008B8F18 /* Typealias.swift */,
 				11889AD11F629334008B8F18 /* DownloadAllShopsInteractorFakeImpl.swift */,
 				11F9DF0D1F682CEA00C01C0F /* DownloadAllShopInteractorNSOpImpl.swift */,
 				11029B8E1F68687E0050DC0C /* DownloadAllShopsInteractorNSURLSessionImpl.swift */,
+			);
+			path = NetworkInteractor;
+			sourceTree = "<group>";
+		};
+		110DA7581F61E07C009A0BDF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				11889ACD1F6292B4008B8F18 /* Typealias.swift */,
+				110A44CA1F701A0000E05460 /* NetworkInteractor */,
+				11FDD4261F6F9C3700C94C72 /* CacheInteractor */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";

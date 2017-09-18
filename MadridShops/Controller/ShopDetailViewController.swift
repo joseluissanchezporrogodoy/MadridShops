@@ -19,13 +19,15 @@ class ShopDetailViewController: UIViewController {
     @IBOutlet weak var textoTienda: UITextView!
     @IBOutlet weak var imagen: UIImageView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = self.shop.name
         self.textoTienda.text = self.shop.description
-        self.shop.image.loadImage(into: imagen)
+        self.activityIndicator.startAnimating()
+        self.shop.image.loadImage(into: imagen,activityIndicator: self.activityIndicator)
     }
     
     

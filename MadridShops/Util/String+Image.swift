@@ -9,7 +9,7 @@
 import UIKit
 
 extension String {
-    func loadImage(into imageView: UIImageView){
+    func loadImage(into imageView: UIImageView, activityIndicator: UIActivityIndicatorView?){
         let queue = OperationQueue()
         queue.addOperation {
             // Hago en segundo plano
@@ -19,6 +19,10 @@ extension String {
                 OperationQueue.main.addOperation {
                     // Hago en primer plano
                     imageView.image = image
+                    if let _ = activityIndicator {
+                        activityIndicator!.hidesWhenStopped = true
+                        activityIndicator!.stopAnimating()
+                    }
                 }
             }
         }
