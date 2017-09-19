@@ -12,16 +12,8 @@ class SaveAllShopsInteractorImps: SaveAllShopsInteractor {
     func execute(shops: Shops, context: NSManagedObjectContext, onSuccess: @escaping (Shops) -> Void, onError: errorClosure) {
         for i in 0..<shops.count(){
             let shop = shops.get(index: i)
-            //mapping shops in to shopCD hacer una función de mapeo para poder testearla
-            let shopCD = ShopCD(context:context)
-            shopCD.name = shop.name
-            shopCD.address = shop.address
-            shopCD.image = shop.image
-            shopCD.logo = shop.logo
-//            shopCD.latitude = shop.latitude!
-//            shopCD.longitude = shop.longitude!
-//            shopCD.description_en = shop.description
-//            shopCD.openingHours  = shop.openingHours
+            
+            let _ = mapShopIntoShopCD(context: context, shop: shop)
         }
         do{
         try context.save()

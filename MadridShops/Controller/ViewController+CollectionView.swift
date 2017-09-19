@@ -11,29 +11,29 @@ import UIKit
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return fetchedResultsController.sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if self.shops != nil {
-                return (self.shops?.count())!
-        }
-        return 0
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell: ShopCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCell", for: indexPath) as! ShopCell
         
-        let shop: Shop = (self.shops?.get(index: indexPath.row))!
+        let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
         
-        cell.refres(shop: shop)
+        cell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
         
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let shop = self.shops?.get(index: indexPath.row)
+        
+         let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
+        let shop = mapShopCDIntoShop(shopCD: shopCD)
         performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
     }
     

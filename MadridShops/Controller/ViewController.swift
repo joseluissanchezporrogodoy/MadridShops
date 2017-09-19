@@ -17,25 +17,36 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        shopsCollectionView.register(UINib(nibName: "ShopCell", bundle: nil), forCellWithReuseIdentifier: "ShopCell")
+       
+        
+        ExecuteOnceInteractorImpl().execute {
+            initializeData()
+        }
+        self.shopsCollectionView.delegate = self
+        self.shopsCollectionView.dataSource = self
+        
+        
+    }
+    
+    func initializeData(){
         
         let downloadShopsInteractor:DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
-        shopsCollectionView.register(UINib(nibName: "ShopCell", bundle: nil), forCellWithReuseIdentifier: "ShopCell")
         downloadShopsInteractor.execute{ (shops: Shops) in
             // todo Ok
             print("Name" + shops.get(index: 0).name)
-            self.shops = shops
+            //self.shops = shops
             
-            // Lo pongo cuando tenga tiendas
-            self.shopsCollectionView.delegate = self
-            self.shopsCollectionView.dataSource = self
             
             // Guardo en CoreData a través del Interactor Habría que cachear si ya se han grabado las tiendas.
             let cacheInteractor = SaveAllShopsInteractorImps()
             cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
-                
+                SetExecutedOnceInteractorImpl().execute()
+                self.shopsCollectionView.delegate = self
+                self.shopsCollectionView.dataSource = self
+                self.shopsCollectionView.reloadData()
             })
         }
-        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowShopDetailSegue"{
@@ -47,5 +58,39 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    // MARK: - Fetched results controller
+    var _fetchedResultsController: NSFetchedResultsController<ShopCD>? = nil
+    
+    var fetchedResultsController: NSFetchedResultsController<ShopCD> {
+        if (_fetchedResultsController != nil) {
+            return _fetchedResultsController!
+        }
+        
+        let fetchRequest: NSFetchRequest<ShopCD> = ShopCD.fetchRequest()
+        
+        // Set the batch size to a suitable number.
+        fetchRequest.fetchBatchSize = 20
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        
+        // Edit the section name key path and cache name if appropriate.
+        // nil for section name key path means "no sections".
+        // fetchRequest == SELECT * FROM EVENT ORDER BY TIMESTAMP DESC
+        _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "ShopsCacheFile")
+        // aFetchedResultsController.delegate = self
+        
+        do {
+            try _fetchedResultsController!.performFetch()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+        
+        return _fetchedResultsController!
+    }
+    
+
 }
 

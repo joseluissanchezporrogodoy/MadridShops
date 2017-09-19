@@ -14,7 +14,7 @@ class ShopCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    func refres(shop: Shop){
+    func refresh(shop: Shop){
         self.shop = shop
         self.label.text = shop.name
         // TODO: Image View
