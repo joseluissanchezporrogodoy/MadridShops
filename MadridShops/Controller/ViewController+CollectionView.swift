@@ -31,8 +31,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-         let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
+        let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
         let shop = mapShopCDIntoShop(shopCD: shopCD)
         performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
     }

@@ -8,15 +8,25 @@
 
 import UIKit
 import CoreData
-class ViewController: UIViewController {
+import CoreLocation
+import MapKit
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var context: NSManagedObjectContext!
-    var shops: Shops?
+   
     
     @IBOutlet weak var shopsCollectionView: UICollectionView!
+    @IBOutlet weak var map: MKMapView!
+    let locationManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.delegate = self
+        self.locationManager.startUpdatingLocation()
+        
         shopsCollectionView.register(UINib(nibName: "ShopCell", bundle: nil), forCellWithReuseIdentifier: "ShopCell")
        
         
@@ -26,7 +36,9 @@ class ViewController: UIViewController {
         self.shopsCollectionView.delegate = self
         self.shopsCollectionView.dataSource = self
         
-        
+        // Centro el mapa
+        let madridLocation = CLLocationCoordinate2D(latitude: 40.416775, longitude:  -3.703790)
+        self.map.setCenter(madridLocation, animated: true)
     }
     
     func initializeData(){
@@ -35,15 +47,12 @@ class ViewController: UIViewController {
         downloadShopsInteractor.execute{ (shops: Shops) in
             // todo Ok
             print("Name" + shops.get(index: 0).name)
-            //self.shops = shops
-            
-            
+
             // Guardo en CoreData a través del Interactor Habría que cachear si ya se han grabado las tiendas.
             let cacheInteractor = SaveAllShopsInteractorImps()
             cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
                 SetExecutedOnceInteractorImpl().execute()
-                self.shopsCollectionView.delegate = self
-                self.shopsCollectionView.dataSource = self
+                self._fetchedResultsController = nil
                 self.shopsCollectionView.reloadData()
             })
         }
@@ -90,7 +99,10 @@ class ViewController: UIViewController {
         
         return _fetchedResultsController!
     }
-    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        let location = locations[0]
+        self.map.setCenter(location.coordinate, animated: true)
+    }
 
 }
 
