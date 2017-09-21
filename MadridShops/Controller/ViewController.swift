@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import CoreLocation
 import MapKit
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController{//, CLLocationManagerDelegate{
     
     var context: NSManagedObjectContext!
    
@@ -23,9 +23,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.delegate = self
-        self.locationManager.startUpdatingLocation()
+        //self.locationManager.requestWhenInUseAuthorization()
+        //self.locationManager.delegate = self
+        //self.locationManager.startUpdatingLocation()
         
         shopsCollectionView.register(UINib(nibName: "ShopCell", bundle: nil), forCellWithReuseIdentifier: "ShopCell")
        
@@ -39,6 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Centro el mapa
         let madridLocation = CLLocationCoordinate2D(latitude: 40.416775, longitude:  -3.703790)
         self.map.setCenter(madridLocation, animated: true)
+        
     }
     
     func initializeData(){
@@ -54,6 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 SetExecutedOnceInteractorImpl().execute()
                 self._fetchedResultsController = nil
                 self.shopsCollectionView.reloadData()
+                self.addPinsToMap()
             })
         }
     }
@@ -99,10 +101,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         return _fetchedResultsController!
     }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-        let location = locations[0]
-        self.map.setCenter(location.coordinate, animated: true)
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+//        let location = locations[0]
+//        self.map.setCenter(location.coordinate, animated: true)
+//    }
+    func addPinsToMap(){
+        let sectionInfo = fetchedResultsController.sections![0]
+        let numberOfElements = sectionInfo.numberOfObjects
+        for i in 0..<numberOfElements{
+            self.map.addAnnotation(MapPin(shop:fetchedResultsController.object(at:IndexPath(row: i, section: 0) ) ))
+        }
     }
-
 }
 
