@@ -14,6 +14,6 @@ public extension String {
     }
     
     public func toDouble() -> Double? {
-        return Double.init(self)
+        return Double.init(self.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: ",", with: ""))
     }
 }

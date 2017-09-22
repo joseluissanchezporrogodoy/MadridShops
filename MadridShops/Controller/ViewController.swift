@@ -23,15 +23,17 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
         //self.locationManager.delegate = self
         //self.locationManager.startUpdatingLocation()
         
+        //Quizás sacarlo a una extensión en un método
         shopsCollectionView.register(UINib(nibName: "ShopCell", bundle: nil), forCellWithReuseIdentifier: "ShopCell")
         
        // Centro el mapa
         let madridLocation = CLLocationCoordinate2D(latitude: 40.416775, longitude:  -3.703790)
         self.map.setCenter(madridLocation, animated: true)
+        //self.map.userLocation
         // Añadir span al mapa
         ExecuteOnceInteractorImpl().execute(closureFirstTime: {
             initializeData()
@@ -51,16 +53,11 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
         let downloadShopsInteractor:DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
         downloadShopsInteractor.execute{ (shops: Shops) in
             // todo Ok
-            print("Name" + shops.get(index: 0).name)
-
-            // Guardo en CoreData a través del Interactor Habría que cachear si ya se han grabado las tiendas.
             let cacheInteractor = SaveAllShopsInteractorImps()
             cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
                 SetExecutedOnceInteractorImpl().execute()
-                //self._fetchedResultsController = nil
                 self.shopsCollectionView.delegate = self
                 self.shopsCollectionView.dataSource = self
-                //self.shopsCollectionView.reloadData()
                 self.addPinsToMap()
             })
         }

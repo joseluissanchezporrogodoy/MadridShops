@@ -10,12 +10,9 @@ import Foundation
 
 class DownloadAllShopsInteractorNSURLSessionImpl: DownloadAllShopsInteractor {
     func execute(onSuccess: @escaping (Shops) -> Void, onError: errorClosure) {
-        let urlString = "https://madrid-shops.com/json_new/getShops.php"
         let session = URLSession.shared
-        if let url = URL(string: urlString){
+        if let url = URL(string: URL_CONSTANTS.urlGETShops){
             let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-                
-                
                 OperationQueue.main.addOperation {
                     assert(Thread.current == Thread.main) // Para depurar si no conincide me tira
                     if error == nil{
