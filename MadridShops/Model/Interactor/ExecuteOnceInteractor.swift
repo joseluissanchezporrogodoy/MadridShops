@@ -11,5 +11,5 @@ import Foundation
 import Foundation
 
 protocol ExecuteOnceInteractor {
-    func execute(closure:() -> Void)
+    func execute( closureFirstTime:() -> Void, closureNoFirstTime: ()-> Void)
 }

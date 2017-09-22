@@ -28,17 +28,21 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
         //self.locationManager.startUpdatingLocation()
         
         shopsCollectionView.register(UINib(nibName: "ShopCell", bundle: nil), forCellWithReuseIdentifier: "ShopCell")
-       
         
-        ExecuteOnceInteractorImpl().execute {
-            initializeData()
-        }
-        self.shopsCollectionView.delegate = self
-        self.shopsCollectionView.dataSource = self
-        
-        // Centro el mapa
+       // Centro el mapa
         let madridLocation = CLLocationCoordinate2D(latitude: 40.416775, longitude:  -3.703790)
         self.map.setCenter(madridLocation, animated: true)
+        // Añadir span al mapa
+        ExecuteOnceInteractorImpl().execute(closureFirstTime: {
+            initializeData()
+        }) {
+            self.shopsCollectionView.delegate = self
+            self.shopsCollectionView.dataSource = self
+            self.addPinsToMap()
+        }
+        
+      
+        
         
     }
     
@@ -53,8 +57,10 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
             let cacheInteractor = SaveAllShopsInteractorImps()
             cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
                 SetExecutedOnceInteractorImpl().execute()
-                self._fetchedResultsController = nil
-                self.shopsCollectionView.reloadData()
+                //self._fetchedResultsController = nil
+                self.shopsCollectionView.delegate = self
+                self.shopsCollectionView.dataSource = self
+                //self.shopsCollectionView.reloadData()
                 self.addPinsToMap()
             })
         }

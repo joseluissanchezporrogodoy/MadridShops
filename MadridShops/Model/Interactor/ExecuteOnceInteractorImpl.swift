@@ -9,12 +9,13 @@
 import Foundation
 
 class ExecuteOnceInteractorImpl: ExecuteOnceInteractor {
-    func execute(closure: () -> Void) {
+   
+     func execute( closureFirstTime:() -> Void, closureNoFirstTime: ()-> Void) {
         let defaults = UserDefaults.standard
         if let _ = defaults.string(forKey: "once"){
-            // already saved
+            closureNoFirstTime()
         }else{ // first time
-            closure()
+            closureFirstTime()
         }
     }
 }
