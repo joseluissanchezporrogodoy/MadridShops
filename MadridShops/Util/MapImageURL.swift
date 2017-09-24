@@ -9,10 +9,12 @@
 import Foundation
 
 func getURLImageMapFromEntity(entity: Shop) -> String{
-    let latitude = entity.latitude?.toString().replacingOccurrences(of: " ", with:"")
-    let longitude = entity.longitude?.toString().replacingOccurrences(of: " ", with: "")
+    let latitude = entity.latitude?.toString()
+    let longitude = entity.longitude?.toString()
     let urlLatitude = URL_CONSTANTS.urlGoogleMapImage.replacingOccurrences(of: "LATITUDE", with: latitude!)
     let urlLongitude = urlLatitude.replacingOccurrences(of: "LONGITUDE", with: longitude!)
+    print(urlLongitude)
     return urlLongitude
 }
+
 

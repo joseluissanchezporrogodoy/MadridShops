@@ -35,33 +35,13 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
         self.map.setCenter(madridLocation, animated: true)
         //self.map.userLocation
         // Añadir span al mapa
-        ExecuteOnceInteractorImpl().execute(closureFirstTime: {
-            initializeData()
-        }) {
             self.shopsCollectionView.delegate = self
             self.shopsCollectionView.dataSource = self
             self.addPinsToMap()
-        }
-        
-      
-        
-        
+    
     }
     
-    func initializeData(){
-        
-        let downloadShopsInteractor:DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
-        downloadShopsInteractor.execute{ (shops: Shops) in
-            // todo Ok
-            let cacheInteractor = SaveAllShopsInteractorImps()
-            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
-                SetExecutedOnceInteractorImpl().execute()
-                self.shopsCollectionView.delegate = self
-                self.shopsCollectionView.dataSource = self
-                self.addPinsToMap()
-            })
-        }
-    }
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowShopDetailSegue"{
             let vc = segue.destination as! ShopDetailViewController

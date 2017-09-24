@@ -129,11 +129,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-LO-71G">
-                                <rect key="frame" x="92" y="510" width="192" height="100"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-xC-txQ">
+                                <rect key="frame" x="178" y="105" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99942404029999998" green="0.59252880139999997" blue="0.39532713110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="2CY-c2-rxh"/>
@@ -146,7 +145,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="redRectangle" destination="wgg-LO-71G" id="fXW-JD-aO9"/>
+                        <outlet property="activityInd" destination="zi8-xC-txQ" id="onl-vQ-vmy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNe-t7-R3z" userLabel="First Responder" sceneMemberID="firstResponder"/>

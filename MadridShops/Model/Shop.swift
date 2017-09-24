@@ -17,6 +17,9 @@ public class Shop {
     var logo: String = ""
     var openingHours: String = ""
     var address: String = ""
+    var imageData: Data? = nil
+    var imageMapData: Data? = nil
+    var imageLogoData: Data? = nil
     
     public init(name: String) {
         self.name = name

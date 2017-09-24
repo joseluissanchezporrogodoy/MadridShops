@@ -28,7 +28,8 @@ class ShopDetailViewController: UIViewController {
         self.textoTienda.text = self.shop.description
         self.activityIndicator.startAnimating()
         //self.shop.image.loadImage(into: imagen,activityIndicator: self.activityIndicator)
-        let imagemapa = getURLImageMapFromEntity(entity: shop)
-        imagemapa.loadImage(into: imagen, activityIndicator: self.activityIndicator)
+        //let imagemapa = getURLImageMapFromEntity(entity: shop)
+        //imagemapa.loadImage(into: imagen, activityIndicator: self.activityIndicator)
+        imagen.image = UIImage(data: shop.imageData!)
     }
 }

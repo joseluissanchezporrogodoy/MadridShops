@@ -20,6 +20,8 @@
 		112C9A791F6305200093A9F8 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C9A781F6305200093A9F8 /* ShopCell.swift */; };
 		115CD8DD1F74F7110076110C /* URL_CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115CD8DC1F74F7110076110C /* URL_CONSTANTS.swift */; };
 		115CD8DF1F74FDDC0076110C /* MapImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115CD8DE1F74FDDC0076110C /* MapImageURL.swift */; };
+		116132D01F77AA4700FAE562 /* DownloadImagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116132CF1F77AA4700FAE562 /* DownloadImagesInteractor.swift */; };
+		116132D21F77AAFF00FAE562 /* DownloadImagesInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116132D11F77AAFF00FAE562 /* DownloadImagesInteractorImpl.swift */; };
 		11771BF71F73972F008BCF9B /* String+Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11771BF61F73972F008BCF9B /* String+Float.swift */; };
 		11889ACE1F6292B4008B8F18 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11889ACD1F6292B4008B8F18 /* Typealias.swift */; };
 		11889AD21F629334008B8F18 /* DownloadAllShopsInteractorFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11889AD11F629334008B8F18 /* DownloadAllShopsInteractorFakeImpl.swift */; };
@@ -75,6 +77,8 @@
 		112C9A781F6305200093A9F8 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
 		115CD8DC1F74F7110076110C /* URL_CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_CONSTANTS.swift; sourceTree = "<group>"; };
 		115CD8DE1F74FDDC0076110C /* MapImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageURL.swift; sourceTree = "<group>"; };
+		116132CF1F77AA4700FAE562 /* DownloadImagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesInteractor.swift; sourceTree = "<group>"; };
+		116132D11F77AAFF00FAE562 /* DownloadImagesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesInteractorImpl.swift; sourceTree = "<group>"; };
 		11771BF61F73972F008BCF9B /* String+Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Float.swift"; sourceTree = "<group>"; };
 		11889ACD1F6292B4008B8F18 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		11889AD11F629334008B8F18 /* DownloadAllShopsInteractorFakeImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorFakeImpl.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				11F9DF0D1F682CEA00C01C0F /* DownloadAllShopInteractorNSOpImpl.swift */,
 				11029B8E1F68687E0050DC0C /* DownloadAllShopsInteractorNSURLSessionImpl.swift */,
 				115CD8DC1F74F7110076110C /* URL_CONSTANTS.swift */,
+				116132CF1F77AA4700FAE562 /* DownloadImagesInteractor.swift */,
+				116132D11F77AAFF00FAE562 /* DownloadImagesInteractorImpl.swift */,
 			);
 			path = NetworkInteractor;
 			sourceTree = "<group>";
@@ -548,6 +554,8 @@
 				11E464D31F7111C000264E7B /* ExecuteOnceInteractor.swift in Sources */,
 				112C9A761F62FFC80093A9F8 /* ViewController+CollectionView.swift in Sources */,
 				11BE701C1F74FF8E00895CBD /* Double+String.swift in Sources */,
+				116132D21F77AAFF00FAE562 /* DownloadImagesInteractorImpl.swift in Sources */,
+				116132D01F77AA4700FAE562 /* DownloadImagesInteractor.swift in Sources */,
 				118B167A1F73D265008D2E0D /* MapPin.swift in Sources */,
 				11F8A5381F671E2800DF37F2 /* MainViewController.swift in Sources */,
 				11E464D71F71133A00264E7B /* SetExecutedOnceInteractorImpl.swift in Sources */,

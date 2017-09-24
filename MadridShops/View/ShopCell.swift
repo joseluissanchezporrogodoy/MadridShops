@@ -13,14 +13,19 @@ class ShopCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  
     func refresh(shop: Shop){
         self.shop = shop
         self.label.text = shop.name
         // TODO: Image View
-        self.activityIndicator.startAnimating()
-        self.shop?.logo.loadImage(into: imageView,activityIndicator: self.activityIndicator)
-        imageView.clipsToBounds = true
+       
+//        self.shop?.logo.loadImage(into: imageView,activityIndicator: self.activityIndicator)
+        if let data = shop.imageLogoData{
+            self.imageView.image = UIImage(data: data)
+            imageView.clipsToBounds = true
+        }
+        
+        
         UIView.animate(withDuration: 1.0) {
             self.imageView.layer.cornerRadius = 30
             
