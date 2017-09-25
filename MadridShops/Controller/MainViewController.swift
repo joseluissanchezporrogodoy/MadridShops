@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var activityInd: UIActivityIndicatorView!
     
+    @IBOutlet weak var reloadButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,11 +25,13 @@ class MainViewController: UIViewController {
     func configViews()  {
         self.activityInd.startAnimating()
         self.activityInd.hidesWhenStopped = true
+        self.reloadButton.isEnabled = false
     }
     func startApp(){
         ExecuteOnceInteractorImpl().execute(closureFirstTime: {
             Reachability.isInternetAvailable(webSiteToPing: nil) { (isInternetAvailable) in
                 guard isInternetAvailable else {
+                    self.activityInd.stopAnimating()
                     self.showAlert()
                     return
                 }
@@ -51,7 +54,7 @@ class MainViewController: UIViewController {
         self.present(alertController, animated: true, completion:nil)
     }
     func enableReloadButton(){
-        
+        self.reloadButton.isEnabled = true
         print("Que pasa neng")
     }
     
@@ -76,6 +79,10 @@ class MainViewController: UIViewController {
     
     
    
+    @IBAction func reload(_ sender: Any) {
+        self.configViews()
+        self.startApp()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ShowShopsSegue"){
