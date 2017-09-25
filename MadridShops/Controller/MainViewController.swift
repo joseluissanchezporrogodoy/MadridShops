@@ -17,20 +17,42 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
-    
-        
+
+            self.configViews()
+            self.startApp()
+    }
+    func configViews()  {
         self.activityInd.startAnimating()
         self.activityInd.hidesWhenStopped = true
+    }
+    func startApp(){
         ExecuteOnceInteractorImpl().execute(closureFirstTime: {
-            initializeData()
-          
-
+            Reachability.isInternetAvailable(webSiteToPing: nil) { (isInternetAvailable) in
+                guard isInternetAvailable else {
+                    self.showAlert()
+                    return
+                }
+                // Do some action if there is Internet
+                self.initializeData()
+            }
         }) {
             self.activityInd.stopAnimating()
         }
+
+    }
+    func showAlert(){
+        // Inform user for example
+        let alertController = UIAlertController(title: "No hay conexión a internet", message: "Por favor vuelve a intentarlo mas tarde", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: {action in self.enableReloadButton()})
+        alertController.addAction(defaultAction)
+        
+        //let alertController = UIAlertController(title: "Default AlertController", message: "A standard alert", preferredStyle: .alert)
+        self.present(alertController, animated: true, completion:nil)
+    }
+    func enableReloadButton(){
+        
+        print("Que pasa neng")
     }
     
     func initializeData(){
