@@ -24,6 +24,7 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
         super.viewDidLoad()
         
         self.locationManager.requestWhenInUseAuthorization()
+        self.map.delegate = self
         //self.locationManager.delegate = self
         //self.locationManager.startUpdatingLocation()
         
@@ -33,7 +34,7 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
        // Centro el mapa
         let madridLocation = CLLocationCoordinate2D(latitude: 40.416775, longitude:  -3.703790)
         self.map.setCenter(madridLocation, animated: true)
-        let region = MKCoordinateRegion(center: madridLocation, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        let region = MKCoordinateRegion(center: madridLocation, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
         let reg = self.map.regionThatFits(region)
         self.map.setRegion(reg, animated: true)
         //self.map.userLocation
@@ -94,7 +95,7 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
     func addPinsToMap(){
         let sectionInfo = fetchedResultsController.sections![0]
         let numberOfElements = sectionInfo.numberOfObjects
-        self.map.delegate = self
+        
         
         var list = [MapPin]()
         for i in 0..<numberOfElements{

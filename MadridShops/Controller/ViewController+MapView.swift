@@ -21,13 +21,9 @@ extension ViewController: MKMapViewDelegate {
             if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
                 annotationView = dequeuedAnnotationView
                 annotationView?.annotation = annotation
-                
-                
             }
             else {
                 annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-                annotationView?.rightCalloutAccessoryView = UIButton(type: .infoDark)
-                
             }
             
             if let annotationView = annotationView {
@@ -52,13 +48,21 @@ extension ViewController: MKMapViewDelegate {
         return nil
     }
     
+    func mapView(_ mapView: MKMapView, didSelect view:MKAnnotationView) {
+        let tapGesture = UITapGestureRecognizer(target:self,  action:#selector(calloutTapped(sender:)))
+        view.addGestureRecognizer(tapGesture)
+    }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {        
-        if control == view.rightCalloutAccessoryView {
-            let anot = view.annotation as! MapPin
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        view.removeGestureRecognizer(view.gestureRecognizers!.first!)
+    }
+    
+    @objc func calloutTapped(sender:UITapGestureRecognizer) {
+        let view = sender.view as! MKAnnotationView
+        if (view.annotation as? MapPin) != nil {
+             let anot = view.annotation as! MapPin
             performSegue(withIdentifier: "ShowShopDetailSegue", sender: mapShopCDIntoShop(shopCD: anot.shop))
         }
-        
     }
 }
 
