@@ -33,6 +33,9 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
        // Centro el mapa
         let madridLocation = CLLocationCoordinate2D(latitude: 40.416775, longitude:  -3.703790)
         self.map.setCenter(madridLocation, animated: true)
+        let region = MKCoordinateRegion(center: madridLocation, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        let reg = self.map.regionThatFits(region)
+        self.map.setRegion(reg, animated: true)
         //self.map.userLocation
         // Añadir span al mapa
             self.shopsCollectionView.delegate = self
@@ -91,9 +94,15 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
     func addPinsToMap(){
         let sectionInfo = fetchedResultsController.sections![0]
         let numberOfElements = sectionInfo.numberOfObjects
+        self.map.delegate = self
+        
+        var list = [MapPin]()
         for i in 0..<numberOfElements{
-            self.map.addAnnotation(MapPin(shop:fetchedResultsController.object(at:IndexPath(row: i, section: 0) ) ))
+            //self.map.addAnnotation(MapPin(shop:fetchedResultsController.object(at:IndexPath(row: i, section: 0) ) ))
+            list.append(MapPin(shop:fetchedResultsController.object(at:IndexPath(row: i, section: 0) ) ))
         }
+        self.map.addAnnotations(list)
+        
     }
 }
 
