@@ -26,7 +26,7 @@ extension ViewController: MKMapViewDelegate {
             }
             else {
                 annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-                annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+                annotationView?.rightCalloutAccessoryView = UIButton(type: .infoDark)
                 
             }
             
@@ -41,6 +41,7 @@ extension ViewController: MKMapViewDelegate {
                     imageView.contentMode = .scaleAspectFit
                     annotationView.leftCalloutAccessoryView = imageView
                 }
+                
 
             }
             
@@ -50,36 +51,17 @@ extension ViewController: MKMapViewDelegate {
         }
         return nil
     }
+    
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {        
+        if control == view.rightCalloutAccessoryView {
+            let anot = view.annotation as! MapPin
+            performSegue(withIdentifier: "ShowShopDetailSegue", sender: mapShopCDIntoShop(shopCD: anot.shop))
+        }
+        
+    }
 }
 
 
-//func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-//    if control == view.rightCalloutAccessoryView {
-//        print(view.annotation?.title!)
-//        performSegue(withIdentifier: "ShowEntityDetailSegue", sender: view.annotation as! MapPin)
-//    }
-//    
-//}
-//        if let annotation = annotation as? MapPin {
-//            let identifier = "AnnotationIdentifier"
-//            var view: MKPinAnnotationView
-//            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-//                as? MKPinAnnotationView { // 2
-//                dequeuedView.annotation = annotation
-//                view = dequeuedView
-//            } else {
-//                // 3
-//                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-//                view.canShowCallout = true
-//
-//                view.calloutOffset = CGPoint(x: -5, y: 5)
-//                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
-//            }
-//
-//            //view.pinTintColor = annotation.pinTintColor()
-//            return view
-//        }
-//        return nil
-//    }
-//}
+
 
