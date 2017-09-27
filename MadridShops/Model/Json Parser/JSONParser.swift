@@ -18,9 +18,13 @@ func parseShops(data: Data) -> Shops{
             shop.address = shopJson["address"]! as! String
             shop.logo = shopJson["logo_img"] as! String
             shop.image = shopJson["img"] as! String
-            shop.description = shopJson["description_en"] as! String
+            shop.description_es = shopJson["description_es"] as! String
+            shop.description_en = shopJson["description_en"] as! String
             shop.longitude = (shopJson["gps_lon"] as! String).toDouble()
             shop.latitude =  (shopJson["gps_lat"] as! String).toDouble()
+            shop.openingHours_en = shopJson["opening_hours_en"] as! String
+            shop.openingHours_es = shopJson["opening_hours_es"] as! String
+            
             shops.add(shop: shop)
         }
     }catch{

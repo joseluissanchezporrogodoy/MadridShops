@@ -10,12 +10,14 @@ import Foundation
 
 public class Shop {
     var name: String
-    var description: String = ""
+    var description_es: String = ""
+    var description_en: String = ""
     var latitude: Double? = nil
     var longitude: Double? = nil
     var image: String = ""
     var logo: String = ""
-    var openingHours: String = ""
+    var openingHours_es: String = ""
+    var openingHours_en: String = ""
     var address: String = ""
     var imageData: Data? = nil
     var imageMapData: Data? = nil

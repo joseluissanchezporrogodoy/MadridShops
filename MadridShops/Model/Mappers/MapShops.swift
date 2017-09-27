@@ -17,8 +17,10 @@ func mapShopCDIntoShop(shopCD: ShopCD) -> Shop {
     shop.latitude = shopCD.latitude
     shop.longitude = shopCD.longitude
     
-    shop.description = shopCD.description_en ?? ""
-    shop.openingHours = shopCD.openingHours ?? ""
+    shop.description_en = shopCD.description_en ?? ""
+    shop.description_es = shopCD.description_es ?? ""
+    shop.openingHours_es = shopCD.openingHours_es ?? ""
+    shop.openingHours_en = shopCD.openingHours_en ?? ""
     
     ///
     shop.imageData = shopCD.imageData ?? nil
@@ -38,9 +40,10 @@ func mapShopIntoShopCD(context: NSManagedObjectContext, shop: Shop) -> ShopCD {
     
     shopCD.latitude = shop.latitude ?? 0.0
     shopCD.longitude = shop.longitude ?? 0.0
-    shopCD.description_en = shop.description
-    shopCD.openingHours = shop.openingHours
-    
+    shopCD.description_es = shop.description_es
+    shopCD.openingHours_es = shop.openingHours_es
+    shopCD.description_en = shop.description_en
+    shopCD.openingHours_en = shop.openingHours_en
     shopCD.imageData = shop.imageData ?? nil
     shopCD.logoImageData = shop.imageLogoData ?? nil
     shopCD.mapImageData = shop.imageMapData ?? nil

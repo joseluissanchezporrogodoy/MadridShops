@@ -12,7 +12,7 @@ class ShopDetailViewController: UIViewController {
     var shop : Shop!
     
     @IBOutlet weak var textoTienda: UITextView!
-    @IBOutlet weak var imagen: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
@@ -20,11 +20,22 @@ class ShopDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = self.shop.name
-        self.textoTienda.text = self.shop.description
+        let preferredLanguage = NSLocale.preferredLanguages[0]
+        if (preferredLanguage.range(of:"es") != nil) {
+            self.textoTienda.text = self.shop.description_es
+        }
+        if (preferredLanguage.range(of:"en") != nil){
+            self.textoTienda.text = self.shop.description_en
+        }
+        
         //self.activityIndicator.startAnimating()
         //self.shop.image.loadImage(into: imagen,activityIndicator: self.activityIndicator)
         //let imagemapa = getURLImageMapFromEntity(entity: shop)
         //imagemapa.loadImage(into: imagen, activityIndicator: self.activityIndicator)
-        imagen.image = UIImage(data: shop.imageMapData!)
+        //imagen.image = UIImage(data: shop.imageMapData!)
+        if let mapData = shop.imageMapData {
+            self.imageView.image = UIImage(data: mapData)
+        }
+        
     }
 }
