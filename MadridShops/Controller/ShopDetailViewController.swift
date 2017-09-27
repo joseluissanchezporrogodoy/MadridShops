@@ -10,11 +10,6 @@ import UIKit
 
 class ShopDetailViewController: UIViewController {
     var shop : Shop!
-    //    var shop : Shop!{
-//        didSet{
-//            self.title = .name
-//        }
-//    }
     
     @IBOutlet weak var textoTienda: UITextView!
     @IBOutlet weak var imagen: UIImageView!

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  MadridShops
+
+  Created by jose luis sanchez-porro godoy on 26/09/2017.
+  Copyright © 2017 jose luis sanchez-porro godoy. All rights reserved.
+*/
+NetworkErrorTitle = "Ups, parece que algo ha ido mal";
+NetworkErrorText = "Parece que no hay conectividad a internet. Por favor, recargue cuando tenga conectividad";

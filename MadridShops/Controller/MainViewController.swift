@@ -45,7 +45,8 @@ class MainViewController: UIViewController {
     }
     func showAlert(){
         // Inform user for example
-        let alertController = UIAlertController(title: "No hay conexión a internet", message: "Por favor vuelve a intentarlo mas tarde", preferredStyle: .alert)
+        let alertController = UIAlertController(title: NSLocalizedString("NetworkErrorTitle", comment: "NetworkErrorTitle"), message:
+            NSLocalizedString("NetworkErrorText", comment: "NetworkErrorText"), preferredStyle: UIAlertControllerStyle.alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: {action in self.enableReloadButton()})
         alertController.addAction(defaultAction)
@@ -55,7 +56,6 @@ class MainViewController: UIViewController {
     }
     func enableReloadButton(){
         self.reloadButton.isEnabled = true
-        print("Que pasa neng")
     }
     
     func initializeData(){
