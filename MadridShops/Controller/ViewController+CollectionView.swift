@@ -20,20 +20,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ShopCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCell", for: indexPath) as! ShopCell
+        let cell: EntityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EntityCell", for: indexPath) as! EntityCell
         
-        let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
+        let shopCD: EntityCD = fetchedResultsController.object(at: indexPath)
         
-        cell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
+        cell.refresh(shop: mapEntityCDIntoEntity(entityCD: shopCD))
         
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
-        let shop = mapShopCDIntoShop(shopCD: shopCD)
-        performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
+        let shopCD: EntityCD = fetchedResultsController.object(at: indexPath)
+        let shop = mapEntityCDIntoEntity(entityCD: shopCD)
+        performSegue(withIdentifier: "ShowDetailSegue", sender: shop)
     }
     
     

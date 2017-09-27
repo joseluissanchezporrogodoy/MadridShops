@@ -9,28 +9,25 @@
 import Foundation
 
 class DownloadImagesInteractorImpl: DownloadImagesInteractor {
-    
-    
-    
-    func execute(shops: Shops, onSuccess: @escaping (Shops) -> Void, onError: errorClosure) {
+    func execute(entities: Entities, onSuccess: @escaping (Entities) -> Void, onError: errorClosure) {
         let queue = OperationQueue()
         queue.addOperation {
-            for i in 0..<shops.count(){
-                let shop = shops.get(index: i)
-                shop.imageLogoData = self.getImageData(urlString: shop.logo)
-                shop.imageData = self.getImageData(urlString: shop.image)
-                shop.imageMapData = self.getImageData(urlString: getURLImageMapFromEntity(entity: shop))
+            for i in 0..<entities.count(){
+                let entity = entities.get(index: i)
+                entity.imageLogoData = self.getImageData(urlString: entity.logo)
+                entity.imageData = self.getImageData(urlString: entity.image)
+                entity.imageMapData = self.getImageData(urlString: getURLImageMapFromEntity(entity: entity))
             }
 
             OperationQueue.main.addOperation {
-                onSuccess(shops)
+                onSuccess(entities)
             }
         }
         
     }
     
-    func execute(shops: Shops, onSuccess: @escaping (Shops) -> Void) {
-        execute(shops: shops, onSuccess: onSuccess,onError: nil)
+    func execute(entities: Entities, onSuccess: @escaping (Entities) -> Void) {
+        execute(entities: entities, onSuccess: onSuccess,onError: nil)
     }
     
     func getImageData(urlString: String) -> Data? {

@@ -8,27 +8,27 @@
 
 import Foundation
 
-func parseShops(data: Data) -> Shops{
-    let shops = Shops()
+func parseEntities(data: Data) -> Entities{
+    let entities = Entities()
     do {
         let jsonObject = try JSONSerialization.jsonObject(with: data , options: JSONSerialization.ReadingOptions.allowFragments) as! Dictionary <String,Any>
         let result = jsonObject["result"] as! [Dictionary<String,Any>]
-        for shopJson in result{
-            let shop = Shop(name: shopJson["name"]! as! String)
-            shop.address = shopJson["address"]! as! String
-            shop.logo = shopJson["logo_img"] as! String
-            shop.image = shopJson["img"] as! String
-            shop.description_es = shopJson["description_es"] as! String
-            shop.description_en = shopJson["description_en"] as! String
-            shop.longitude = (shopJson["gps_lon"] as! String).toDouble()
-            shop.latitude =  (shopJson["gps_lat"] as! String).toDouble()
-            shop.openingHours_en = shopJson["opening_hours_en"] as! String
-            shop.openingHours_es = shopJson["opening_hours_es"] as! String
+        for entityJson in result{
+            let entity = Entity(name: entityJson["name"]! as! String)
+            entity.address = entityJson["address"]! as! String
+            entity.logo = entityJson["logo_img"] as! String
+            entity.image = entityJson["img"] as! String
+            entity.description_es = entityJson["description_es"] as! String
+            entity.description_en = entityJson["description_en"] as! String
+            entity.longitude = (entityJson["gps_lon"] as! String).toDouble()
+            entity.latitude =  (entityJson["gps_lat"] as! String).toDouble()
+            entity.openingHours_en = entityJson["opening_hours_en"] as! String
+            entity.openingHours_es = entityJson["opening_hours_es"] as! String
             
-            shops.add(shop: shop)
+            entities.add(shop: entity)
         }
     }catch{
          print("Error parsing JSON")
     }
-    return shops
+    return entities
 }

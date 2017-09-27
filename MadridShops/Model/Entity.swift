@@ -7,8 +7,13 @@
 //
 
 import Foundation
-
-public class Shop {
+enum Type: String {
+    
+    case shop
+    
+    case activity
+}
+public class Entity {
     var name: String
     var description_es: String = ""
     var description_en: String = ""

@@ -8,17 +8,23 @@
 
 import Foundation
 
-class DownloadAllShopsInteractorNSURLSessionImpl: DownloadAllShopsInteractor {
-    func execute(onSuccess: @escaping (Shops) -> Void, onError: errorClosure) {
+class DownloadAllInteractorNSURLSessionImpl: DownloadAllInteractor {
+    func execute(type: String?,onSuccess: @escaping (Entities) -> Void, onError: errorClosure) {
         let session = URLSession.shared
-        if let url = URL(string: URL_CONSTANTS.urlGETShops){
+        let urlString:String
+        if(type == Type.shop.rawValue){
+            urlString = URL_CONSTANTS.urlGETShops
+        }else{
+            urlString = URL_CONSTANTS.urlGETActivities
+        }
+        if let url = URL(string: urlString){
             let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
                 OperationQueue.main.addOperation {
                     assert(Thread.current == Thread.main) // Para depurar si no conincide me tira
                     if error == nil{
                         // OK
-                        let shops = parseShops(data: data!)
-                        onSuccess(shops)
+                        let entities = parseEntities(data: data!)
+                        onSuccess(entities)
                     }else{
                         // Error
                         if let myError = onError{
@@ -32,8 +38,8 @@ class DownloadAllShopsInteractorNSURLSessionImpl: DownloadAllShopsInteractor {
         }
     }
     
-    func execute(onSuccess: @escaping (Shops) -> Void) {
-        execute(onSuccess: onSuccess, onError: nil)
+    func execute(type: String?,onSuccess: @escaping (Entities) -> Void) {
+        execute(type: type,onSuccess: onSuccess, onError: nil)
     }
     
     

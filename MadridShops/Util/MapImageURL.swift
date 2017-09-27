@@ -8,7 +8,7 @@
 
 import Foundation
 
-func getURLImageMapFromEntity(entity: Shop) -> String{
+func getURLImageMapFromEntity(entity: Entity) -> String{
     let latitude = entity.latitude?.toString()
     let longitude = entity.longitude?.toString()
     let urlLatitude = URL_CONSTANTS.urlGoogleMapImage.replacingOccurrences(of: "LATITUDE", with: latitude!)

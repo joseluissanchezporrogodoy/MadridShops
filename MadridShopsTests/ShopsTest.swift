@@ -13,13 +13,13 @@ import MadridShops
 class ShopsTest: XCTestCase {
     
     func testGivenEmptyShopsNumberShopsIsZero(){
-        let sut = Shops()
+        let sut = Entities()
         XCTAssertEqual(0, sut.count())
     }
     func testGivenEmptyShopsWithOneElementNumberShopsIsOne(){
         //sut (system under test)
-        let sut = Shops()
-        sut.add(shop: Shop(name:"Shop"))
+        let sut = Entities()
+        sut.add(shop: Entity(name:"Shop"))
         XCTAssertEqual(1, sut.count())
     }
     

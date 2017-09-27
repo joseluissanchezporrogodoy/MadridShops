@@ -13,8 +13,8 @@ class MapPin: NSObject, MKAnnotation {
     //var subtitle: String?
     var coordinate: CLLocationCoordinate2D
     var data: Data?
-    var shop: ShopCD
-    init(shop: ShopCD) {
+    var shop: EntityCD
+    init(shop: EntityCD) {
         self.coordinate = CLLocationCoordinate2D(latitude: shop.latitude, longitude: shop.longitude)
         self.title = shop.name
         self.data = shop.logoImageData

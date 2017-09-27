@@ -11,31 +11,31 @@ import Foundation
 // Se puede generalizar, tener en cuenta para la practica que se haga con shops y con todo
 // Podríamos hacerlo fuera
 
-protocol ShopsProtocol {
+protocol EntitiesProtocol {
     func count() -> Int
-    func add(shop: Shop)
-    func get(index: Int) -> Shop
+    func add(shop: Entity)
+    func get(index: Int) -> Entity
 }
 // Lo hago público para verlo desde fuera, en concreto en los test
-public class Shops: ShopsProtocol{
+public class Entities: EntitiesProtocol{
    
-    private var shopsList: [Shop]?
+    private var entityList: [Entity]?
    
     public init() {
-        self.shopsList = []
+        self.entityList = []
     }
     public func count() -> Int {
-        return (shopsList?.count)!
+        return (entityList?.count)!
     }
     
-    public func add(shop: Shop) {
-        shopsList?.append(shop)
+    public func add(shop: Entity) {
+        entityList?.append(shop)
     }
     
-    public func get(index: Int) -> Shop {
+    public func get(index: Int) -> Entity {
         //lógica del índice si esta dentro de los márgenes
      
-        return (shopsList?[index])!
+        return (entityList?[index])!
     }
     
    

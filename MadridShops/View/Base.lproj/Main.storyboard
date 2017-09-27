@@ -65,17 +65,17 @@
                     <connections>
                         <outlet property="map" destination="55a-zc-Z8B" id="q3B-FI-Zp5"/>
                         <outlet property="shopsCollectionView" destination="oaK-hQ-K20" id="gpI-TY-G4o"/>
-                        <segue destination="vzS-zm-Teg" kind="show" identifier="ShowShopDetailSegue" id="7JN-im-sSq"/>
+                        <segue destination="vzS-zm-Teg" kind="show" identifier="ShowDetailSegue" id="7JN-im-sSq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-452" y="178"/>
         </scene>
-        <!--Shop Detail View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="RAX-ws-Coo">
             <objects>
-                <viewController id="vzS-zm-Teg" customClass="ShopDetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vzS-zm-Teg" customClass="DetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lwd-dV-wza">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,13 +137,16 @@
                                 <rect key="frame" x="164" y="318" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToActivities:" destination="xbY-yJ-roD" eventType="touchUpInside" id="bye-vd-5cV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roD-Us-V97">
                                 <rect key="frame" x="145" y="243" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Shops"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="96K-IU-Fa1"/>
+                                    <action selector="goToShops:" destination="xbY-yJ-roD" eventType="touchUpInside" id="oiV-Nv-EZC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,6 +163,7 @@
                     <connections>
                         <outlet property="activityInd" destination="zi8-xC-txQ" id="onl-vQ-vmy"/>
                         <outlet property="reloadButton" destination="b1P-4u-1Zk" id="5Kn-0E-Qle"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowListSegue" id="hjN-OP-6kd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNe-t7-R3z" userLabel="First Responder" sceneMemberID="firstResponder"/>

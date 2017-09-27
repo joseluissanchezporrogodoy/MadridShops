@@ -10,6 +10,6 @@ import Foundation
 
 
 protocol DownloadImagesInteractor {
-    func execute(shops: Shops,onSuccess: @escaping (Shops) -> Void, onError: errorClosure)
-    func execute(shops: Shops, onSuccess: @escaping (Shops) -> Void)
+    func execute(entities: Entities,onSuccess: @escaping (Entities) -> Void, onError: errorClosure)
+    func execute(entities: Entities, onSuccess: @escaping (Entities) -> Void)
 }

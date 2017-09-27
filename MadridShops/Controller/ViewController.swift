@@ -13,6 +13,7 @@ import MapKit
 class ViewController: UIViewController{//, CLLocationManagerDelegate{
     
     var context: NSManagedObjectContext!
+    var type: String!
    
     
     @IBOutlet weak var shopsCollectionView: UICollectionView!
@@ -29,7 +30,7 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
         //self.locationManager.startUpdatingLocation()
         
         //Quizás sacarlo a una extensión en un método
-        shopsCollectionView.register(UINib(nibName: "ShopCell", bundle: nil), forCellWithReuseIdentifier: "ShopCell")
+        shopsCollectionView.register(UINib(nibName: "EntityCell", bundle: nil), forCellWithReuseIdentifier: "EntityCell")
         
        // Centro el mapa
         let madridLocation = CLLocationCoordinate2D(latitude: 40.416775, longitude:  -3.703790)
@@ -47,25 +48,26 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
     
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowShopDetailSegue"{
-            let vc = segue.destination as! ShopDetailViewController
-            //let indexPath = self.shopsCollectionView.indexPathsForSelectedItems![0]// lo puedo obtener del collection
-           // let shop = self.shops?.get(index: indexPath.row)
-            let shop = sender as! Shop
-            vc.shop = shop
+        if segue.identifier == "ShowDetailSegue"{
+            let vc = segue.destination as! DetailViewController
+            let shop = sender as! Entity
+            vc.entity = shop
             
         }
     }
     
     // MARK: - Fetched results controller
-    var _fetchedResultsController: NSFetchedResultsController<ShopCD>? = nil
+    var _fetchedResultsController: NSFetchedResultsController<EntityCD>? = nil
     
-    var fetchedResultsController: NSFetchedResultsController<ShopCD> {
+    var fetchedResultsController: NSFetchedResultsController<EntityCD> {
         if (_fetchedResultsController != nil) {
             return _fetchedResultsController!
         }
         
-        let fetchRequest: NSFetchRequest<ShopCD> = ShopCD.fetchRequest()
+        let fetchRequest: NSFetchRequest<EntityCD> = EntityCD.fetchRequest()
+        
+        
+        fetchRequest.predicate = NSPredicate(format: "type == %@", self.type)
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20

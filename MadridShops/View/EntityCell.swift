@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ShopCell: UICollectionViewCell {
-    var shop: Shop?
+class EntityCell: UICollectionViewCell {
+    var shop: Entity?
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
   
-    func refresh(shop: Shop){
+    func refresh(shop: Entity){
         self.shop = shop
         self.label.text = shop.name
         // TODO: Image View
