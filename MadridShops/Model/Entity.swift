@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum Type: String {
+public enum Type: String {
     
     case shop
     

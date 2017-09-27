@@ -25,7 +25,7 @@ func parseEntities(data: Data) -> Entities{
             entity.openingHours_en = entityJson["opening_hours_en"] as! String
             entity.openingHours_es = entityJson["opening_hours_es"] as! String
             
-            entities.add(shop: entity)
+            entities.add(entity: entity)
         }
     }catch{
          print("Error parsing JSON")

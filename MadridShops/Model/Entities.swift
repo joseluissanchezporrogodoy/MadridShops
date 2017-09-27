@@ -13,7 +13,7 @@ import Foundation
 
 protocol EntitiesProtocol {
     func count() -> Int
-    func add(shop: Entity)
+    func add(entity: Entity)
     func get(index: Int) -> Entity
 }
 // Lo hago público para verlo desde fuera, en concreto en los test
@@ -28,8 +28,8 @@ public class Entities: EntitiesProtocol{
         return (entityList?.count)!
     }
     
-    public func add(shop: Entity) {
-        entityList?.append(shop)
+    public func add(entity: Entity) {
+        entityList?.append(entity)
     }
     
     public func get(index: Int) -> Entity {

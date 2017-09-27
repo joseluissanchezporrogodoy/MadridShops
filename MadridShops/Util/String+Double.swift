@@ -9,10 +9,7 @@
 import Foundation
 
 public extension String {
-    public func toFloat() -> Float? {
-        return Float.init(self)
-    }
-    
+ 
     public func toDouble() -> Double? {
         return Double.init(self.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: ",", with: ""))
     }

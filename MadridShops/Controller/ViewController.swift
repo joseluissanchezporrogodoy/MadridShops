@@ -72,7 +72,7 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "ShopsCacheFile")
+        _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "CacheFile")
         
         do {
             try _fetchedResultsController!.performFetch()
