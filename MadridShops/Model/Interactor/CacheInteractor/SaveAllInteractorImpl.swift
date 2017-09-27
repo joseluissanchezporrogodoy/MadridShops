@@ -14,7 +14,7 @@ class SaveAllInteractorImps: SaveAllInteractor {
     func execute(entities: Entities,type: String?, context: NSManagedObjectContext, onSuccess: () -> Void, onError: errorClosure) {
         for i in 0..<entities.count(){
             let entity = entities.get(index: i)
-            let entityCD = mapShopIntoShopCD(context: context, entity: entity)
+            let entityCD = mapEntityIntoEntityCD(context: context, entity: entity)
             entityCD.type = type!
         }
         do{

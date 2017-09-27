@@ -90,7 +90,7 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
  
         var list = [MapPin]()
         for i in 0..<numberOfElements{
-       list.append(MapPin(shop:fetchedResultsController.object(at:IndexPath(row: i, section: 0) ) ))
+       list.append(MapPin(entity:fetchedResultsController.object(at:IndexPath(row: i, section: 0) ) ))
         }
         self.map.addAnnotations(list)
         

@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="-452" y="178"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Title-->
         <scene sceneID="RAX-ws-Coo">
             <objects>
                 <viewController id="vzS-zm-Teg" customClass="DetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,6 +111,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="09c-pz-RHE"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="RSs-nN-aWY">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="mapicon" id="TGv-Ye-3Tg">
+                            <connections>
+                                <action selector="openInMaps:" destination="vzS-zm-Teg" id="mEt-KZ-nbY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="alc-ur-ath" id="7L9-1j-TYF"/>
                         <outlet property="imageView" destination="3eo-xp-ndQ" id="ZYQ-1d-Ghm"/>
@@ -162,6 +169,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityInd" destination="zi8-xC-txQ" id="onl-vQ-vmy"/>
+                        <outlet property="goToActivitiesButton" destination="zsg-sp-me9" id="ypr-FU-rhG"/>
+                        <outlet property="goToShopsButton" destination="roD-Us-V97" id="qav-0m-XZL"/>
                         <outlet property="reloadButton" destination="b1P-4u-1Zk" id="5Kn-0E-Qle"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ShowListSegue" id="hjN-OP-6kd"/>
                     </connections>
@@ -171,4 +180,7 @@
             <point key="canvasLocation" x="-1258.4000000000001" y="177.66116941529236"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mapicon" width="50" height="44"/>
+    </resources>
 </document>

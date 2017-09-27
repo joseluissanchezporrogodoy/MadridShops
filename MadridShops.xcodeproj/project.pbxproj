@@ -75,7 +75,6 @@
 		111D22CE1F6EF140008ECC18 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		112C9A731F62FE170093A9F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		112C9A751F62FFC80093A9F8 /* ViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionView.swift"; sourceTree = "<group>"; };
-		112C9A771F6303F50093A9F8 /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
 		112C9A781F6305200093A9F8 /* EntityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityCell.swift; sourceTree = "<group>"; };
 		11481A881F7C081800623E19 /* UtilTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilTest.swift; sourceTree = "<group>"; };
 		115CD8DC1F74F7110076110C /* URL_CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_CONSTANTS.swift; sourceTree = "<group>"; };
@@ -249,7 +248,6 @@
 				11FC35391F61D1A500CC5F1D /* View */,
 				11FC35381F61D19300CC5F1D /* Controller */,
 				11FC351F1F61D02100CC5F1D /* Assets.xcassets */,
-				112C9A771F6303F50093A9F8 /* store.png */,
 				11FC35241F61D02100CC5F1D /* Info.plist */,
 			);
 			path = MadridShops;

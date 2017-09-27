@@ -26,7 +26,7 @@ func mapEntityCDIntoEntity(entityCD: EntityCD) -> Entity {
     return shop
 }
 
-func mapShopIntoShopCD(context: NSManagedObjectContext, entity: Entity) -> EntityCD {
+func mapEntityIntoEntityCD(context: NSManagedObjectContext, entity: Entity) -> EntityCD {
     
     let entityCD = EntityCD(context: context)
     entityCD.name = entity.name

@@ -13,12 +13,12 @@ class MapPin: NSObject, MKAnnotation {
     //var subtitle: String?
     var coordinate: CLLocationCoordinate2D
     var data: Data?
-    var shop: EntityCD
-    init(shop: EntityCD) {
-        self.coordinate = CLLocationCoordinate2D(latitude: shop.latitude, longitude: shop.longitude)
-        self.title = shop.name
-        self.data = shop.logoImageData
-        self.shop = shop
+    var entity: EntityCD
+    init(entity: EntityCD) {
+        self.coordinate = CLLocationCoordinate2D(latitude: entity.latitude, longitude: entity.longitude)
+        self.title = entity.name
+        self.data = entity.logoImageData
+        self.entity = entity
         //self.subtitle = shop.subtitle
         super.init()
     }

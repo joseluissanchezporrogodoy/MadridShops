@@ -19,6 +19,10 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     
+    @IBOutlet weak var goToShopsButton: UIButton!
+    
+    @IBOutlet weak var goToActivitiesButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +34,8 @@ class MainViewController: UIViewController {
         self.activityInd.startAnimating()
         self.activityInd.hidesWhenStopped = true
         self.reloadButton.isEnabled = false
+        self.goToShopsButton.isHidden = true
+        self.goToActivitiesButton.isHidden = true
     }
     
     func startApp(){
@@ -45,6 +51,7 @@ class MainViewController: UIViewController {
             }
         }) {
             self.activityInd.stopAnimating()
+            self.showButtons()
         }
         
     }
@@ -82,14 +89,15 @@ class MainViewController: UIViewController {
  
     func initializeActivitiesData(){
         
-        let downloadShopsInteractor:DownloadAllInteractor = DownloadAllInteractorNSURLSessionImpl()
-        downloadShopsInteractor.execute(type: Type.activity.rawValue) { (shops: Entities) in
+        let downloadActivitiesInteractor:DownloadAllInteractor = DownloadAllInteractorNSURLSessionImpl()
+        downloadActivitiesInteractor.execute(type: Type.activity.rawValue) { (shops: Entities) in
             let downloadImagesInteractor: DownloadImagesInteractorImpl = DownloadImagesInteractorImpl()
             downloadImagesInteractor.execute(entities: shops, onSuccess: { (shops) in
                 let cacheInteractor = SaveAllInteractorImps()
                 cacheInteractor.execute(entities: shops, type: Type.activity.rawValue, context: self.context, onSuccess: { () in
                     self.activityInd.stopAnimating()
                     SetExecutedOnceInteractorImpl().execute()
+                    self.showButtons()
                 })
                 
             })
@@ -97,7 +105,22 @@ class MainViewController: UIViewController {
     }
     
     
+    func showButtons () {
     
+        // swift:
+        self.goToShopsButton.alpha = 0
+        self.goToShopsButton.isHidden =  false
+        UIView.animate(withDuration: 2) {
+            self.goToShopsButton.alpha = 1
+        }
+        
+        self.goToActivitiesButton.alpha = 0
+        self.goToActivitiesButton.isHidden =  false
+        UIView.animate(withDuration: 2) {
+            self.goToActivitiesButton.alpha = 1
+        }
+    }
+
     
     @IBAction func reload(_ sender: Any) {
         self.configViews()

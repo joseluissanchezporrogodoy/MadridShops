@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MapKit
 class DetailViewController: UIViewController {
     var entity : Entity!
     
@@ -38,4 +38,24 @@ class DetailViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func openInMaps(_ sender: Any) {
+        let latitude = self.entity.latitude!
+        let longitude = self.entity.longitude!
+        
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span),
+            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
+            ] as [String : Any]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = self.entity.name
+        mapItem.openInMaps(launchOptions: options)
+        
+    }
+    
 }

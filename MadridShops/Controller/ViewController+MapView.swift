@@ -61,7 +61,7 @@ extension ViewController: MKMapViewDelegate {
         let view = sender.view as! MKAnnotationView
         if (view.annotation as? MapPin) != nil {
              let anot = view.annotation as! MapPin
-            performSegue(withIdentifier: "ShowDetailSegue", sender: mapEntityCDIntoEntity(entityCD: anot.shop))
+            performSegue(withIdentifier: "ShowDetailSegue", sender: mapEntityCDIntoEntity(entityCD: anot.entity))
         }
     }
 }
