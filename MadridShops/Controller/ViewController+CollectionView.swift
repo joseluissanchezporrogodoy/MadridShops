@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
@@ -35,6 +35,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let shop = mapEntityCDIntoEntity(entityCD: shopCD)
         performSegue(withIdentifier: "ShowDetailSegue", sender: shop)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+         return CGSize(width: self.view.frame.width, height: 100.0)
+    }
     
 }

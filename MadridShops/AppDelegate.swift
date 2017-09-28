@@ -21,13 +21,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav = self.window?.rootViewController as! UINavigationController
         let mainVC = nav.topViewController as! MainViewController
         mainVC.context = self.context
-        
+        self.proxyApparence()
         return true
     }
     func applicationDidEnterBackground(_ application: UIApplication) {
         guard let _ = self.context else { return }
         self.cds.saveContext(context: self.context!)
     }
- 
+    // proxy de apariencia. Cambiamos todo los colores de los componentes de la App
+    
+    func proxyApparence(){
+        
+        let AppBackGroundColor = UIColor.black
+        let AppForetextColor = UIColor.white
+        
+        UINavigationBar.appearance().barTintColor = AppBackGroundColor
+        UINavigationBar.appearance().barStyle = .black
+        UINavigationBar.appearance().tintColor = AppForetextColor
+        
+        UITableView.appearance().backgroundColor = AppBackGroundColor
+        UITableViewCell.appearance().backgroundColor = AppBackGroundColor
+        UITableViewCell.appearance().tintColor = AppForetextColor
+        
+        UILabel.appearance().tintColor = AppForetextColor
+
+        UITabBar.appearance().barTintColor = AppBackGroundColor
+        UITabBar.appearance().tintColor = AppForetextColor
+        UITabBar.appearance().barTintColor = AppForetextColor
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Bold", size: CGFloat(10.0))!, NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Bold", size: CGFloat(10.0))!, NSAttributedStringKey.foregroundColor: UIColor.white], for: .normal)
+    }
+
 }
 

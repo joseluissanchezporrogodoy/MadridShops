@@ -9,13 +9,14 @@
 import UIKit
 
 class EntityCell: UICollectionViewCell {
-    var shop: Entity?
+    var entity: Entity?
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-  
+    @IBOutlet weak var openingHoursLabel: UILabel!
+    
     func refresh(shop: Entity){
-        self.shop = shop
+        self.entity = shop
         self.label.text = shop.name
         // TODO: Image View
        
@@ -24,7 +25,13 @@ class EntityCell: UICollectionViewCell {
             self.imageView.image = UIImage(data: data)
             imageView.clipsToBounds = true
         }
-        
+        let preferredLanguage = NSLocale.preferredLanguages[0]
+        if (preferredLanguage.range(of:"es") != nil) {
+            self.openingHoursLabel.text = self.entity?.openingHours_es
+        }
+        if (preferredLanguage.range(of:"en") != nil){
+            self.openingHoursLabel.text = self.entity?.openingHours_en
+        }
         
         UIView.animate(withDuration: 1.0) {
             self.imageView.layer.cornerRadius = 30
