@@ -11,10 +11,11 @@ import MapKit
 class DetailViewController: UIViewController {
     var entity : Entity!
     
-    @IBOutlet weak var textoTienda: UITextView!
+    @IBOutlet weak var textoTienda: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-
+    @IBOutlet weak var addressLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +34,7 @@ class DetailViewController: UIViewController {
         } else if  let imageData = entity.imageData {
             self.imageView.image = UIImage(data: imageData)
         }
+        self.addressLabel.text = self.entity.address
         
     }
     
