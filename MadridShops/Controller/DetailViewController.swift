@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var textoTienda: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,13 +28,10 @@ class DetailViewController: UIViewController {
             self.textoTienda.text = self.entity.description_en
         }
         
-        //self.activityIndicator.startAnimating()
-        //self.shop.image.loadImage(into: imagen,activityIndicator: self.activityIndicator)
-        //let imagemapa = getURLImageMapFromEntity(entity: shop)
-        //imagemapa.loadImage(into: imagen, activityIndicator: self.activityIndicator)
-        //imagen.image = UIImage(data: shop.imageMapData!)
         if let mapData = entity.imageMapData {
             self.imageView.image = UIImage(data: mapData)
+        } else if  let imageData = entity.imageData {
+            self.imageView.image = UIImage(data: imageData)
         }
         
     }
@@ -42,7 +39,6 @@ class DetailViewController: UIViewController {
     @IBAction func openInMaps(_ sender: Any) {
         let latitude = self.entity.latitude!
         let longitude = self.entity.longitude!
-        
         let regionDistance:CLLocationDistance = 10000
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)

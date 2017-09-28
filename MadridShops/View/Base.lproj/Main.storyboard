@@ -95,10 +95,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="alc-ur-ath">
-                                        <rect key="frame" x="181" y="493" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -119,7 +115,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityIndicator" destination="alc-ur-ath" id="7L9-1j-TYF"/>
                         <outlet property="imageView" destination="3eo-xp-ndQ" id="ZYQ-1d-Ghm"/>
                         <outlet property="textoTienda" destination="zis-bN-SJM" id="Nv8-tE-zvQ"/>
                     </connections>
