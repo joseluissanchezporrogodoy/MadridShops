@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -131,28 +133,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-xC-txQ">
-                                <rect key="frame" x="178" y="105" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-xC-txQ">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsg-sp-me9">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsg-sp-me9">
+                                <rect key="frame" x="75" y="545" width="225" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="3q1-Vj-ufT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Activities">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="goToActivities:" destination="xbY-yJ-roD" eventType="touchUpInside" id="bye-vd-5cV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roD-Us-V97">
-                                <rect key="frame" x="145" y="243" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Shops"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roD-Us-V97">
+                                <rect key="frame" x="75" y="463" width="225" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="k2H-km-lNd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Shops">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="goToShops:" destination="xbY-yJ-roD" eventType="touchUpInside" id="oiV-Nv-EZC"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HfJ-uW-B0D">
+                                <rect key="frame" x="71" y="89" width="233" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HfJ-uW-B0D" secondAttribute="height" multiplier="263:226" id="0vS-sb-gdO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2CY-c2-rxh" firstAttribute="trailing" secondItem="zsg-sp-me9" secondAttribute="trailing" constant="75" id="2P6-sf-ENN"/>
+                            <constraint firstItem="zi8-xC-txQ" firstAttribute="centerX" secondItem="GQG-ka-d6L" secondAttribute="centerX" id="Ea7-wI-KBx"/>
+                            <constraint firstItem="HfJ-uW-B0D" firstAttribute="top" secondItem="2CY-c2-rxh" secondAttribute="top" constant="25" id="Hzg-mA-mI3"/>
+                            <constraint firstItem="roD-Us-V97" firstAttribute="top" secondItem="zi8-xC-txQ" secondAttribute="bottom" constant="119.5" id="Jj2-89-cFG"/>
+                            <constraint firstItem="zsg-sp-me9" firstAttribute="top" secondItem="roD-Us-V97" secondAttribute="bottom" constant="8" id="Q7h-qN-M7n"/>
+                            <constraint firstItem="zi8-xC-txQ" firstAttribute="centerY" secondItem="GQG-ka-d6L" secondAttribute="centerY" id="Vrp-E9-0Kg"/>
+                            <constraint firstItem="2CY-c2-rxh" firstAttribute="trailing" secondItem="roD-Us-V97" secondAttribute="trailing" constant="75" id="VzK-6Z-WBs"/>
+                            <constraint firstItem="HfJ-uW-B0D" firstAttribute="centerX" secondItem="GQG-ka-d6L" secondAttribute="centerX" id="Zqd-gS-u7F"/>
+                            <constraint firstItem="zsg-sp-me9" firstAttribute="top" secondItem="roD-Us-V97" secondAttribute="bottom" constant="8" id="bsM-Ys-ZuJ"/>
+                            <constraint firstItem="zsg-sp-me9" firstAttribute="leading" secondItem="2CY-c2-rxh" secondAttribute="leading" constant="75" id="tgX-s5-kat"/>
+                            <constraint firstItem="roD-Us-V97" firstAttribute="leading" secondItem="2CY-c2-rxh" secondAttribute="leading" constant="75" id="vbH-K8-NKP"/>
+                            <constraint firstItem="HfJ-uW-B0D" firstAttribute="height" relation="lessThanOrEqual" secondItem="GQG-ka-d6L" secondAttribute="height" multiplier="0.3" id="xat-gD-jqY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2CY-c2-rxh"/>
                     </view>
                     <navigationItem key="navigationItem" title="¡MAD SHOP!" id="Nad-4D-74d">
@@ -176,6 +209,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="500" height="500"/>
         <image name="mapicon" width="50" height="44"/>
     </resources>
 </document>
