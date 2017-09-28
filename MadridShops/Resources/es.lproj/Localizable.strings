@@ -7,3 +7,5 @@
 */
 NetworkErrorTitle = "Ups, parece que algo ha ido mal";
 NetworkErrorText = "Parece que no hay conectividad a internet. Por favor, recargue cuando tenga conectividad";
+shop = "Tiendas";
+activity = "Actividades";

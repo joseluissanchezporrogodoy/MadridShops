@@ -26,6 +26,7 @@ class ViewController: UIViewController{//, CLLocationManagerDelegate{
         
         self.locationManager.requestWhenInUseAuthorization()
         self.map.delegate = self
+        self.title = NSLocalizedString(self.type, comment: self.type)
         //self.locationManager.delegate = self
         //self.locationManager.startUpdatingLocation()
         
