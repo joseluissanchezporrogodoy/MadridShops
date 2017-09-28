@@ -35,18 +35,20 @@ class MainViewController: UIViewController {
         self.reloadButton.isEnabled = false
         self.goToShopsButton.isHidden = true
         self.goToActivitiesButton.isHidden = true
-       SwiftSpinner.show(NSLocalizedString("Download_Shop_Data_Message", comment: "Download_Shop_Data_Message"))
+       
     }
     
     func startApp(){
         ExecuteOnceInteractorImpl().execute(closureFirstTime: {
+            SwiftSpinner.show(NSLocalizedString("Download_Shop_Data_Message", comment: "Download_Shop_Data_Message"))
             Reachability.isInternetAvailable(webSiteToPing: nil) { (isInternetAvailable) in
                 guard isInternetAvailable else {
-                    
+                    SwiftSpinner.hide()
                     self.showAlert()
                     return
                 }
                 // Do some action if there is Internet
+                
                 self.initializeShopsData()
             }
         }) {

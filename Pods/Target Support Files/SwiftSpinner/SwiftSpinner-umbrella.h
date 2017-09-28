@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "SwiftSpinner.h"
 
-FOUNDATION_EXPORT double FillableLoadersVersionNumber;
-FOUNDATION_EXPORT const unsigned char FillableLoadersVersionString[];
+FOUNDATION_EXPORT double SwiftSpinnerVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftSpinnerVersionString[];
 

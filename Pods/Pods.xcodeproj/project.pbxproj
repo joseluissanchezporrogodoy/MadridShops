@@ -7,131 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		016B8C54F9F69D9336A04A7C9550EF61 /* Pods-MadridShops-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D62F67DFA11E1BF96CD0E4E64821FE /* Pods-MadridShops-dummy.m */; };
-		16AE630478EE5DABCAC9589F5329E5B8 /* PlainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D85E719E2D2F52C59853F48FF2FD /* PlainLoader.swift */; };
-		4D7E6BB1E63461E678DB989D929A6753 /* SpikeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1300DA808156B7ECCB2A632F931DE /* SpikeLoader.swift */; };
-		575EF7F85743F43E6A7C0E9EB96B9551 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		771750728F40E7720F29F2ED68B6FDF0 /* FillableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F78BF409627161B19F01D713B9FD3 /* FillableLoader.swift */; };
-		8DE0A11CDA8AEF7B9971333CEE1F72DE /* FillableLoaders-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D2C431A20F4CC5B2DD5D953AEEF2F5F /* FillableLoaders-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		914D3632674814C9B940B3A56B760393 /* Pods-MadridShopsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4920E51CE1617BEFCA400114C9B2BDD2 /* Pods-MadridShopsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B426E801A8012813D29F3586009E625 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		A36E9D8533FD1C91437EDA2F3BEE9748 /* RoundedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78128E3AA8237365577E633808C2C656 /* RoundedLoader.swift */; };
-		A9A569FF0728D434D685EA759ABAD405 /* FillableLoaders-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 263456D8F755D5E6EE2DA14ED4CF256E /* FillableLoaders-dummy.m */; };
-		ABDEB9B9B011A5A5463A3513F7C9119A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		B6259A04A5795F5320B388AE6176AB7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		CF60166C82D754942210BEF36DC8AC3E /* Pods-MadridShopsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AB969179F946C80A32A66E9A981FF2 /* Pods-MadridShopsTests-dummy.m */; };
-		DBB819650172BA060C06BBA8AFD3C0C7 /* WavesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D16162D1E651C8C131305A7677E50D /* WavesLoader.swift */; };
-		EC0C8368969C78C289C0AF4D09850D78 /* Pods-MadridShops-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C79D791FC86A1E1B37540E1B26289024 /* Pods-MadridShops-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04B89541B212686DE92763643B6B692D /* Pods-MadridShopsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4920E51CE1617BEFCA400114C9B2BDD2 /* Pods-MadridShopsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06FEC2935678410B22D0FE6EBAE6519B /* SwiftSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA62438C43ABF96C01849F2DDF78B2 /* SwiftSpinner-dummy.m */; };
+		088FC050F4ED871F5E1AA26E46730E30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		146309C6F4F359139E023571CE7F0533 /* SwiftSpinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FF0E9AE8E279A97B8A0B60E2C8DED8 /* SwiftSpinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46CA9A22E9F651EF2B995E90402CB7AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		5D1C508B88030A5088859E11773C4A2B /* SwiftSpinner.h in Headers */ = {isa = PBXBuildFile; fileRef = B54D6D2DC94C1AD34435AAF7688CC651 /* SwiftSpinner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7977A049A074DF10812558BF7A307AF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		7CB997DA0B548191EB51F725DAE5CE95 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB720842853199FC95D876715F4C9EF7 /* SwiftSpinner.swift */; };
+		89549342A3768CF7125E564EEE6C882F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		E65BFCD0C66D833DC8361EF1D7C1A82B /* Pods-MadridShopsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AB969179F946C80A32A66E9A981FF2 /* Pods-MadridShopsTests-dummy.m */; };
+		E9F92279D7283A4B7C7A7182A9B5B5DA /* Pods-MadridShops-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C79D791FC86A1E1B37540E1B26289024 /* Pods-MadridShops-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCB3972AD4E940CE15E92E075CC6C03D /* Pods-MadridShops-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D62F67DFA11E1BF96CD0E4E64821FE /* Pods-MadridShops-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		164F05537DE82F1580D6B8E7C35A5DEC /* PBXContainerItemProxy */ = {
+		392095999335D933B771D2C335FE2302 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 425632F84FDE13A29BBE47E186843971;
-			remoteInfo = FillableLoaders;
+			remoteGlobalIDString = 102BF9B15A8AEEAB37462C976AE156D1;
+			remoteInfo = SwiftSpinner;
 		};
-		78CBC58BF89E18C36D3B45DCDEDED11B /* PBXContainerItemProxy */ = {
+		D083E99C39B54FF34A6731948E827C25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 425632F84FDE13A29BBE47E186843971;
-			remoteInfo = FillableLoaders;
+			remoteGlobalIDString = 102BF9B15A8AEEAB37462C976AE156D1;
+			remoteInfo = SwiftSpinner;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10D4D85E719E2D2F52C59853F48FF2FD /* PlainLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlainLoader.swift; path = Source/PlainLoader.swift; sourceTree = "<group>"; };
+		11134376B4A236D11E178FB2AFE6CFB7 /* SwiftSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftSpinner.framework; path = SwiftSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B5591A8F9571CF45706084213C9EF0 /* Pods-MadridShopsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MadridShopsTests.release.xcconfig"; sourceTree = "<group>"; };
+		14E65913C363BC430C6A8EC6A8153A5A /* SwiftSpinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftSpinner.modulemap; sourceTree = "<group>"; };
 		15F1AA9C9616C0ECA33CF787BF781F23 /* Pods-MadridShopsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MadridShopsTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1AE1300DA808156B7ECCB2A632F931DE /* SpikeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpikeLoader.swift; path = Source/SpikeLoader.swift; sourceTree = "<group>"; };
 		1CC72A794505D8A6CFD7FEEEA0686258 /* Pods-MadridShops-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MadridShops-acknowledgements.markdown"; sourceTree = "<group>"; };
-		263456D8F755D5E6EE2DA14ED4CF256E /* FillableLoaders-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FillableLoaders-dummy.m"; sourceTree = "<group>"; };
-		27C388B26346E7C6DDCC507A12710D08 /* Pods_MadridShopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MadridShopsTests.framework; path = "Pods-MadridShopsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24BFD6F3F9AD74854B6B0858D47579F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288CCAEF5809DCCF123AFFEC906F07B6 /* Pods-MadridShopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MadridShopsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D77245D3EADE6DFEC3B7CB7BB51F08C /* Pods-MadridShops.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MadridShops.modulemap"; sourceTree = "<group>"; };
-		3487C1E1FEED24CA06B8FDA73F3E5BDC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36B5736DA67CA86073F32ABABE961C27 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C3F4946371FDB47B911C1ACCD826737 /* Pods-MadridShops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MadridShops.debug.xcconfig"; sourceTree = "<group>"; };
 		40AB969179F946C80A32A66E9A981FF2 /* Pods-MadridShopsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MadridShopsTests-dummy.m"; sourceTree = "<group>"; };
 		4920E51CE1617BEFCA400114C9B2BDD2 /* Pods-MadridShopsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MadridShopsTests-umbrella.h"; sourceTree = "<group>"; };
 		62F9025C553FE72648E4C16C382A7C19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78128E3AA8237365577E633808C2C656 /* RoundedLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedLoader.swift; path = Source/RoundedLoader.swift; sourceTree = "<group>"; };
-		7D2C431A20F4CC5B2DD5D953AEEF2F5F /* FillableLoaders-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FillableLoaders-umbrella.h"; sourceTree = "<group>"; };
+		699CE6F0E114D31BFC13E436B2CA175F /* Pods_MadridShopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MadridShopsTests.framework; path = "Pods-MadridShopsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		770F050D638D79375AD320AB3F505134 /* SwiftSpinner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpinner-prefix.pch"; sourceTree = "<group>"; };
 		827FD93B9D0A0789BC6AA684E824C31D /* Pods-MadridShopsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MadridShopsTests-resources.sh"; sourceTree = "<group>"; };
-		85D9173732DF95A715836FAA032EADF7 /* Pods_MadridShops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MadridShops.framework; path = "Pods-MadridShops.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C84D5F1BE4D6786342390842B0AA88B /* Pods-MadridShops-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MadridShops-resources.sh"; sourceTree = "<group>"; };
 		92D62F67DFA11E1BF96CD0E4E64821FE /* Pods-MadridShops-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MadridShops-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96995E8DF25A8D58D698420AE802C8E0 /* Pods-MadridShops-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MadridShops-frameworks.sh"; sourceTree = "<group>"; };
 		9D28D4A5F1A0D14E9B0AB193D668BB38 /* Pods-MadridShops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MadridShops.release.xcconfig"; sourceTree = "<group>"; };
-		A81D16E7A720566829DDC352D46AD30A /* FillableLoaders-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FillableLoaders-prefix.pch"; sourceTree = "<group>"; };
+		A0FF0E9AE8E279A97B8A0B60E2C8DED8 /* SwiftSpinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpinner-umbrella.h"; sourceTree = "<group>"; };
+		B54D6D2DC94C1AD34435AAF7688CC651 /* SwiftSpinner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftSpinner.h; path = SwiftSpinner/SwiftSpinner.h; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B70EF1D8A6CBAF1D7E9C6C14A0528D52 /* FillableLoaders.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FillableLoaders.modulemap; sourceTree = "<group>"; };
-		B7D16162D1E651C8C131305A7677E50D /* WavesLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WavesLoader.swift; path = Source/WavesLoader.swift; sourceTree = "<group>"; };
 		BD350B849DA95B36D17B6859C13FB82A /* Pods-MadridShops-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MadridShops-acknowledgements.plist"; sourceTree = "<group>"; };
 		C79D791FC86A1E1B37540E1B26289024 /* Pods-MadridShops-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MadridShops-umbrella.h"; sourceTree = "<group>"; };
-		CAFA2A4BAA60155E40C779F9502AE942 /* FillableLoaders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FillableLoaders.framework; path = FillableLoaders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7F65B39513144FC5AB9CD6A9F510B13 /* SwiftSpinner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftSpinner.xcconfig; sourceTree = "<group>"; };
+		CC6DC44DBE36DEF34662C3FBEC64D8FA /* Pods_MadridShops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MadridShops.framework; path = "Pods-MadridShops.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CA62438C43ABF96C01849F2DDF78B2 /* SwiftSpinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftSpinner-dummy.m"; sourceTree = "<group>"; };
 		D3E66DD59CEDE0DEAC674F64915F8420 /* Pods-MadridShopsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MadridShopsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D698154FAAF3050601278C5DABFF62AE /* FillableLoaders.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FillableLoaders.xcconfig; sourceTree = "<group>"; };
 		D83C205E7C0FDA7E48F02C3FAEE841E1 /* Pods-MadridShopsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MadridShopsTests.modulemap"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E62A797B168FA7A12D6959D3CAE80116 /* Pods-MadridShopsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MadridShopsTests-frameworks.sh"; sourceTree = "<group>"; };
-		F11F78BF409627161B19F01D713B9FD3 /* FillableLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillableLoader.swift; path = Source/FillableLoader.swift; sourceTree = "<group>"; };
+		FB720842853199FC95D876715F4C9EF7 /* SwiftSpinner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSpinner.swift; path = SwiftSpinner/SwiftSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02734B70EC31C7A6F5AE7A24D0F4B231 /* Frameworks */ = {
+		6BF2616CA5D528C5F7BDE2ADFFB949EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B426E801A8012813D29F3586009E625 /* Foundation.framework in Frameworks */,
+				7977A049A074DF10812558BF7A307AF1 /* Foundation.framework in Frameworks */,
+				89549342A3768CF7125E564EEE6C882F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74FA00E9DB54027E1256F083B466A545 /* Frameworks */ = {
+		B949A0FDF23E536003E7306E3EEC6D6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABDEB9B9B011A5A5463A3513F7C9119A /* Foundation.framework in Frameworks */,
+				088FC050F4ED871F5E1AA26E46730E30 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F76DEF36865B34C0AAB2D8A9552A6815 /* Frameworks */ = {
+		D9F7DA7BB49712640F0C7785619D9EB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575EF7F85743F43E6A7C0E9EB96B9551 /* Foundation.framework in Frameworks */,
-				B6259A04A5795F5320B388AE6176AB7D /* UIKit.framework in Frameworks */,
+				46CA9A22E9F651EF2B995E90402CB7AF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04ECFA1E6929AF9480C283DF8AC2EA71 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2A615A4B702C743454F9FCF081294587 /* FillableLoaders */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2A615A4B702C743454F9FCF081294587 /* FillableLoaders */ = {
-			isa = PBXGroup;
-			children = (
-				F11F78BF409627161B19F01D713B9FD3 /* FillableLoader.swift */,
-				10D4D85E719E2D2F52C59853F48FF2FD /* PlainLoader.swift */,
-				78128E3AA8237365577E633808C2C656 /* RoundedLoader.swift */,
-				1AE1300DA808156B7ECCB2A632F931DE /* SpikeLoader.swift */,
-				B7D16162D1E651C8C131305A7677E50D /* WavesLoader.swift */,
-				8F3CF38B2C227DF1761D8841FB2CD0B7 /* Support Files */,
-			);
-			name = FillableLoaders;
-			path = FillableLoaders;
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +119,24 @@
 				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		4DD715C3D463865130174229A1C59020 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EF33E5116FE45ACA4CD6348AD54CD70 /* SwiftSpinner */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		65EDE93FB4AE596F471641EC951DACF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC6DC44DBE36DEF34662C3FBEC64D8FA /* Pods_MadridShops.framework */,
+				699CE6F0E114D31BFC13E436B2CA175F /* Pods_MadridShopsTests.framework */,
+				11134376B4A236D11E178FB2AFE6CFB7 /* SwiftSpinner.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6BE279B98549246CB7DB803C9D3AA0F7 /* Pods-MadridShopsTests */ = {
@@ -172,34 +162,35 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				04ECFA1E6929AF9480C283DF8AC2EA71 /* Pods */,
-				9B007F1EC6F6988F9E33C3176E7ADFDA /* Products */,
+				4DD715C3D463865130174229A1C59020 /* Pods */,
+				65EDE93FB4AE596F471641EC951DACF8 /* Products */,
 				BB11CB5AC6639B418B85F379E63BDFD3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8F3CF38B2C227DF1761D8841FB2CD0B7 /* Support Files */ = {
+		7EF33E5116FE45ACA4CD6348AD54CD70 /* SwiftSpinner */ = {
 			isa = PBXGroup;
 			children = (
-				B70EF1D8A6CBAF1D7E9C6C14A0528D52 /* FillableLoaders.modulemap */,
-				D698154FAAF3050601278C5DABFF62AE /* FillableLoaders.xcconfig */,
-				263456D8F755D5E6EE2DA14ED4CF256E /* FillableLoaders-dummy.m */,
-				A81D16E7A720566829DDC352D46AD30A /* FillableLoaders-prefix.pch */,
-				7D2C431A20F4CC5B2DD5D953AEEF2F5F /* FillableLoaders-umbrella.h */,
-				3487C1E1FEED24CA06B8FDA73F3E5BDC /* Info.plist */,
+				B54D6D2DC94C1AD34435AAF7688CC651 /* SwiftSpinner.h */,
+				FB720842853199FC95D876715F4C9EF7 /* SwiftSpinner.swift */,
+				9E8346534EAAEB8899A3BEEE43DB8BE7 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FillableLoaders";
+			name = SwiftSpinner;
+			path = SwiftSpinner;
 			sourceTree = "<group>";
 		};
-		9B007F1EC6F6988F9E33C3176E7ADFDA /* Products */ = {
+		9E8346534EAAEB8899A3BEEE43DB8BE7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CAFA2A4BAA60155E40C779F9502AE942 /* FillableLoaders.framework */,
-				85D9173732DF95A715836FAA032EADF7 /* Pods_MadridShops.framework */,
-				27C388B26346E7C6DDCC507A12710D08 /* Pods_MadridShopsTests.framework */,
+				24BFD6F3F9AD74854B6B0858D47579F4 /* Info.plist */,
+				14E65913C363BC430C6A8EC6A8153A5A /* SwiftSpinner.modulemap */,
+				C7F65B39513144FC5AB9CD6A9F510B13 /* SwiftSpinner.xcconfig */,
+				D0CA62438C43ABF96C01849F2DDF78B2 /* SwiftSpinner-dummy.m */,
+				770F050D638D79375AD320AB3F505134 /* SwiftSpinner-prefix.pch */,
+				A0FF0E9AE8E279A97B8A0B60E2C8DED8 /* SwiftSpinner-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftSpinner";
 			sourceTree = "<group>";
 		};
 		A49DC6D94FEE325E0448EB898DED811F /* Pods-MadridShops */ = {
@@ -232,84 +223,85 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0AB028B04FC70B912DC7288DAF9F49CD /* Headers */ = {
+		9721E4E87DC2F22FB1A35FCA9F0CFACC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC0C8368969C78C289C0AF4D09850D78 /* Pods-MadridShops-umbrella.h in Headers */,
+				04B89541B212686DE92763643B6B692D /* Pods-MadridShopsTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16116F78849FBC74FB159895C6781B89 /* Headers */ = {
+		9A3888CC07DE2ACF0B60B3F6D27FBCF2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DE0A11CDA8AEF7B9971333CEE1F72DE /* FillableLoaders-umbrella.h in Headers */,
+				E9F92279D7283A4B7C7A7182A9B5B5DA /* Pods-MadridShops-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F9E60564ECEEE53148E6B6C45BC4B10 /* Headers */ = {
+		D4EE55F9590BF0FD633BBB590BA41B1A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914D3632674814C9B940B3A56B760393 /* Pods-MadridShopsTests-umbrella.h in Headers */,
+				146309C6F4F359139E023571CE7F0533 /* SwiftSpinner-umbrella.h in Headers */,
+				5D1C508B88030A5088859E11773C4A2B /* SwiftSpinner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1283350107D027744392BDD2631815A8 /* Pods-MadridShops */ = {
+		01338DDA8EFE9976B34B2239E649616F /* Pods-MadridShops */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8DD006B17F10C4B398CBA361767DEED4 /* Build configuration list for PBXNativeTarget "Pods-MadridShops" */;
+			buildConfigurationList = 5D2AFA6B264BBC633CB7FAAFCECA9D6D /* Build configuration list for PBXNativeTarget "Pods-MadridShops" */;
 			buildPhases = (
-				F93BF6075672FAE92A1D32CEBF045434 /* Sources */,
-				02734B70EC31C7A6F5AE7A24D0F4B231 /* Frameworks */,
-				0AB028B04FC70B912DC7288DAF9F49CD /* Headers */,
+				359EDC4F41790CC62AE6FF605D8164FC /* Sources */,
+				D9F7DA7BB49712640F0C7785619D9EB3 /* Frameworks */,
+				9A3888CC07DE2ACF0B60B3F6D27FBCF2 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B9619001BE24CE1E79A78577E7FF7976 /* PBXTargetDependency */,
+				0AC3C044EAFC849A03D80C81EC2065C4 /* PBXTargetDependency */,
 			);
 			name = "Pods-MadridShops";
 			productName = "Pods-MadridShops";
-			productReference = 85D9173732DF95A715836FAA032EADF7 /* Pods_MadridShops.framework */;
+			productReference = CC6DC44DBE36DEF34662C3FBEC64D8FA /* Pods_MadridShops.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		425632F84FDE13A29BBE47E186843971 /* FillableLoaders */ = {
+		102BF9B15A8AEEAB37462C976AE156D1 /* SwiftSpinner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7286C0BBE312777D0DFBA35554234EA /* Build configuration list for PBXNativeTarget "FillableLoaders" */;
+			buildConfigurationList = 30F37757ED80560EA91487FEB14098AC /* Build configuration list for PBXNativeTarget "SwiftSpinner" */;
 			buildPhases = (
-				E3BF7A493B428D4AD91A94C0AFC68F55 /* Sources */,
-				F76DEF36865B34C0AAB2D8A9552A6815 /* Frameworks */,
-				16116F78849FBC74FB159895C6781B89 /* Headers */,
+				8E1666AA154D9F0040B8622E6581F0D7 /* Sources */,
+				6BF2616CA5D528C5F7BDE2ADFFB949EB /* Frameworks */,
+				D4EE55F9590BF0FD633BBB590BA41B1A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FillableLoaders;
-			productName = FillableLoaders;
-			productReference = CAFA2A4BAA60155E40C779F9502AE942 /* FillableLoaders.framework */;
+			name = SwiftSpinner;
+			productName = SwiftSpinner;
+			productReference = 11134376B4A236D11E178FB2AFE6CFB7 /* SwiftSpinner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9EEFE64ACBAA2FEC3953D3C3EFC49A9B /* Pods-MadridShopsTests */ = {
+		BD84620826E59CF657D58FD33A4BC8FC /* Pods-MadridShopsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C172066CE89FA37CDDE7C21D5AF36D47 /* Build configuration list for PBXNativeTarget "Pods-MadridShopsTests" */;
+			buildConfigurationList = A141A25A77691FD7FF2CCCB9054D2FA1 /* Build configuration list for PBXNativeTarget "Pods-MadridShopsTests" */;
 			buildPhases = (
-				113F8677459998AE92578EF2CA4BA919 /* Sources */,
-				74FA00E9DB54027E1256F083B466A545 /* Frameworks */,
-				8F9E60564ECEEE53148E6B6C45BC4B10 /* Headers */,
+				B108391D80DA98499E9D1BBA213D2953 /* Sources */,
+				B949A0FDF23E536003E7306E3EEC6D6F /* Frameworks */,
+				9721E4E87DC2F22FB1A35FCA9F0CFACC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4AE1873C2DCAA385A19685904854A62F /* PBXTargetDependency */,
+				CFBC533DED0AD6BBE1D68CA700AC2B88 /* PBXTargetDependency */,
 			);
 			name = "Pods-MadridShopsTests";
 			productName = "Pods-MadridShopsTests";
-			productReference = 27C388B26346E7C6DDCC507A12710D08 /* Pods_MadridShopsTests.framework */;
+			productReference = 699CE6F0E114D31BFC13E436B2CA175F /* Pods_MadridShopsTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -329,101 +321,62 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9B007F1EC6F6988F9E33C3176E7ADFDA /* Products */;
+			productRefGroup = 65EDE93FB4AE596F471641EC951DACF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				425632F84FDE13A29BBE47E186843971 /* FillableLoaders */,
-				1283350107D027744392BDD2631815A8 /* Pods-MadridShops */,
-				9EEFE64ACBAA2FEC3953D3C3EFC49A9B /* Pods-MadridShopsTests */,
+				01338DDA8EFE9976B34B2239E649616F /* Pods-MadridShops */,
+				BD84620826E59CF657D58FD33A4BC8FC /* Pods-MadridShopsTests */,
+				102BF9B15A8AEEAB37462C976AE156D1 /* SwiftSpinner */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		113F8677459998AE92578EF2CA4BA919 /* Sources */ = {
+		359EDC4F41790CC62AE6FF605D8164FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF60166C82D754942210BEF36DC8AC3E /* Pods-MadridShopsTests-dummy.m in Sources */,
+				FCB3972AD4E940CE15E92E075CC6C03D /* Pods-MadridShops-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3BF7A493B428D4AD91A94C0AFC68F55 /* Sources */ = {
+		8E1666AA154D9F0040B8622E6581F0D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				771750728F40E7720F29F2ED68B6FDF0 /* FillableLoader.swift in Sources */,
-				A9A569FF0728D434D685EA759ABAD405 /* FillableLoaders-dummy.m in Sources */,
-				16AE630478EE5DABCAC9589F5329E5B8 /* PlainLoader.swift in Sources */,
-				A36E9D8533FD1C91437EDA2F3BEE9748 /* RoundedLoader.swift in Sources */,
-				4D7E6BB1E63461E678DB989D929A6753 /* SpikeLoader.swift in Sources */,
-				DBB819650172BA060C06BBA8AFD3C0C7 /* WavesLoader.swift in Sources */,
+				06FEC2935678410B22D0FE6EBAE6519B /* SwiftSpinner-dummy.m in Sources */,
+				7CB997DA0B548191EB51F725DAE5CE95 /* SwiftSpinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F93BF6075672FAE92A1D32CEBF045434 /* Sources */ = {
+		B108391D80DA98499E9D1BBA213D2953 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				016B8C54F9F69D9336A04A7C9550EF61 /* Pods-MadridShops-dummy.m in Sources */,
+				E65BFCD0C66D833DC8361EF1D7C1A82B /* Pods-MadridShopsTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4AE1873C2DCAA385A19685904854A62F /* PBXTargetDependency */ = {
+		0AC3C044EAFC849A03D80C81EC2065C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FillableLoaders;
-			target = 425632F84FDE13A29BBE47E186843971 /* FillableLoaders */;
-			targetProxy = 78CBC58BF89E18C36D3B45DCDEDED11B /* PBXContainerItemProxy */;
+			name = SwiftSpinner;
+			target = 102BF9B15A8AEEAB37462C976AE156D1 /* SwiftSpinner */;
+			targetProxy = D083E99C39B54FF34A6731948E827C25 /* PBXContainerItemProxy */;
 		};
-		B9619001BE24CE1E79A78577E7FF7976 /* PBXTargetDependency */ = {
+		CFBC533DED0AD6BBE1D68CA700AC2B88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FillableLoaders;
-			target = 425632F84FDE13A29BBE47E186843971 /* FillableLoaders */;
-			targetProxy = 164F05537DE82F1580D6B8E7C35A5DEC /* PBXContainerItemProxy */;
+			name = SwiftSpinner;
+			target = 102BF9B15A8AEEAB37462C976AE156D1 /* SwiftSpinner */;
+			targetProxy = 392095999335D933B771D2C335FE2302 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02C9FCE8360BFC14F43A1FCCC367CE09 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D698154FAAF3050601278C5DABFF62AE /* FillableLoaders.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FillableLoaders/FillableLoaders-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FillableLoaders/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FillableLoaders/FillableLoaders.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FillableLoaders;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		61F1C00769463F2C2376EF07B68B7E53 /* Debug */ = {
+		3C39B7CEC66840AB5A732A1F86ECEF21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C3F4946371FDB47B911C1ACCD826737 /* Pods-MadridShops.debug.xcconfig */;
 			buildSettings = {
@@ -461,6 +414,118 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		44DD2B67D512035C6FDE1BFACD7F53F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288CCAEF5809DCCF123AFFEC906F07B6 /* Pods-MadridShopsTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MadridShopsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MadridShopsTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47A741D14B8DD0A7A3C14AD7278275E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7F65B39513144FC5AB9CD6A9F510B13 /* SwiftSpinner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpinner/SwiftSpinner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftSpinner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftSpinner/SwiftSpinner.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftSpinner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F23F27FE552614381F254BD86AB38AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D28D4A5F1A0D14E9B0AB193D668BB38 /* Pods-MadridShops.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MadridShops/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MadridShops/Pods-MadridShops.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MadridShops;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -511,9 +576,9 @@
 			};
 			name = Debug;
 		};
-		B2F3C7574C8CE8499080C5FECE0DCF04 /* Release */ = {
+		B0AA910182975C87667251977916532A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D698154FAAF3050601278C5DABFF62AE /* FillableLoaders.xcconfig */;
+			baseConfigurationReference = 14B5591A8F9571CF45706084213C9EF0 /* Pods-MadridShopsTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -527,24 +592,62 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FillableLoaders/FillableLoaders-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FillableLoaders/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MadridShopsTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FillableLoaders/FillableLoaders.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FillableLoaders;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MadridShopsTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		B3CE7FE84B3251CD3458339C88B203F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7F65B39513144FC5AB9CD6A9F510B13 /* SwiftSpinner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpinner/SwiftSpinner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftSpinner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftSpinner/SwiftSpinner.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftSpinner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C03B8870130C98D1B02B59D003687524 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -590,121 +693,6 @@
 			};
 			name = Release;
 		};
-		C5DE1BE6F3C70CE7D6FF81AE8FC27208 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 288CCAEF5809DCCF123AFFEC906F07B6 /* Pods-MadridShopsTests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MadridShopsTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MadridShopsTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D42297EB545AC1D0D2C2F5B57F2474E2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14B5591A8F9571CF45706084213C9EF0 /* Pods-MadridShopsTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MadridShopsTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MadridShopsTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EB9E7003344CD2A30A8BADD94CBC0186 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D28D4A5F1A0D14E9B0AB193D668BB38 /* Pods-MadridShops.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MadridShops/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MadridShops/Pods-MadridShops.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MadridShops;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -717,29 +705,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8DD006B17F10C4B398CBA361767DEED4 /* Build configuration list for PBXNativeTarget "Pods-MadridShops" */ = {
+		30F37757ED80560EA91487FEB14098AC /* Build configuration list for PBXNativeTarget "SwiftSpinner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				61F1C00769463F2C2376EF07B68B7E53 /* Debug */,
-				EB9E7003344CD2A30A8BADD94CBC0186 /* Release */,
+				B3CE7FE84B3251CD3458339C88B203F7 /* Debug */,
+				47A741D14B8DD0A7A3C14AD7278275E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C172066CE89FA37CDDE7C21D5AF36D47 /* Build configuration list for PBXNativeTarget "Pods-MadridShopsTests" */ = {
+		5D2AFA6B264BBC633CB7FAAFCECA9D6D /* Build configuration list for PBXNativeTarget "Pods-MadridShops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C5DE1BE6F3C70CE7D6FF81AE8FC27208 /* Debug */,
-				D42297EB545AC1D0D2C2F5B57F2474E2 /* Release */,
+				3C39B7CEC66840AB5A732A1F86ECEF21 /* Debug */,
+				8F23F27FE552614381F254BD86AB38AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7286C0BBE312777D0DFBA35554234EA /* Build configuration list for PBXNativeTarget "FillableLoaders" */ = {
+		A141A25A77691FD7FF2CCCB9054D2FA1 /* Build configuration list for PBXNativeTarget "Pods-MadridShopsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02C9FCE8360BFC14F43A1FCCC367CE09 /* Debug */,
-				B2F3C7574C8CE8499080C5FECE0DCF04 /* Release */,
+				44DD2B67D512035C6FDE1BFACD7F53F3 /* Debug */,
+				B0AA910182975C87667251977916532A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
