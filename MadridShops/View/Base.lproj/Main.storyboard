@@ -123,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="312.80000000000001" y="177.66116941529236"/>
         </scene>
-        <!--¡MAD!-->
+        <!--¡MAD SHOP!-->
         <scene sceneID="TSM-pr-UAr">
             <objects>
                 <viewController id="xbY-yJ-roD" customClass="MainViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
@@ -155,7 +155,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="2CY-c2-rxh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="¡MAD!" id="Nad-4D-74d">
+                    <navigationItem key="navigationItem" title="¡MAD SHOP!" id="Nad-4D-74d">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="b1P-4u-1Zk">
                             <connections>
                                 <action selector="reload:" destination="xbY-yJ-roD" id="qTm-jS-UkB"/>
