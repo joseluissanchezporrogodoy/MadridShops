@@ -6,7 +6,7 @@ use_frameworks!
 def common_pods
     # pod 'DotsLoading', '~> 1.0.0'
     # pod 'FillableLoaders', '~>1.3.0'
-    
+    pod 'SwiftSpinner', '~> 1.4'
 end
 
 target 'MadridShops' do
