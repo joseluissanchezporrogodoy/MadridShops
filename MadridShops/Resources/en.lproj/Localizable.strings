@@ -9,4 +9,9 @@ NetworkErrorTitle = "Ups, it seems that something goes wrong";
 NetworkErrorText = "It seems that there is no internet connectivity. Reload data.";
 shop = "Shop";
 activity = "Activity";
-
+Download_Shop_Data_Message = "Downloading Shops data..";
+Download_Shop_Image_Data_Message = "Downloading Shops Image data..";
+Save_Shop_Data_Message = "Save Shops data..";
+Download_Activity_Data_Message = "Downloading Activity data..";
+Download_Activity_Image_Data_Message ="Downloading Activity Image data..";
+Save_Activity_Data_Message = "Save Activity data..";

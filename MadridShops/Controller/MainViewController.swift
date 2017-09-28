@@ -9,13 +9,13 @@
 import UIKit
 import CoreData
 
-
+import SwiftSpinner
 
 class MainViewController: UIViewController {
     
     var context: NSManagedObjectContext!
     
-    @IBOutlet weak var activityInd: UIActivityIndicatorView!
+   
     
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     
@@ -31,18 +31,18 @@ class MainViewController: UIViewController {
     }
     
     func configViews()  {
-        self.activityInd.startAnimating()
-        self.activityInd.hidesWhenStopped = true
+       
         self.reloadButton.isEnabled = false
         self.goToShopsButton.isHidden = true
         self.goToActivitiesButton.isHidden = true
+       SwiftSpinner.show(NSLocalizedString("Download_Shop_Data_Message", comment: "Download_Shop_Data_Message"))
     }
     
     func startApp(){
         ExecuteOnceInteractorImpl().execute(closureFirstTime: {
             Reachability.isInternetAvailable(webSiteToPing: nil) { (isInternetAvailable) in
                 guard isInternetAvailable else {
-                    self.activityInd.stopAnimating()
+                    
                     self.showAlert()
                     return
                 }
@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
                 self.initializeShopsData()
             }
         }) {
-            self.activityInd.stopAnimating()
+            
             self.showButtons()
         }
         
@@ -70,11 +70,13 @@ class MainViewController: UIViewController {
     }
     
     func initializeShopsData(){
-        
+       
         let downloadShopsInteractor:DownloadAllInteractor = DownloadAllInteractorNSURLSessionImpl()
         downloadShopsInteractor.execute(type: Type.shop.rawValue) { (shops: Entities) in
+            SwiftSpinner.show(NSLocalizedString("Download_Shop_Image_Data_Message", comment: "Download_Shop_Image_Data_Message"))
             let downloadImagesInteractor: DownloadImagesInteractorImpl = DownloadImagesInteractorImpl()
             downloadImagesInteractor.execute(entities: shops, onSuccess: { (shops) in
+               SwiftSpinner.show(NSLocalizedString("Save_Shop_Data_Message", comment: "Save_Shop_Data_Message"))
                 let cacheInteractor = SaveAllInteractorImps()
                 cacheInteractor.execute(entities: shops, type: Type.shop.rawValue, context: self.context, onSuccess: { () in
                     ///Llamar a activities
@@ -88,14 +90,16 @@ class MainViewController: UIViewController {
     }
  
     func initializeActivitiesData(){
-        
+        SwiftSpinner.show(NSLocalizedString("Download_Activity_Data_Message", comment: "Download_Activity_Data_Message"))
         let downloadActivitiesInteractor:DownloadAllInteractor = DownloadAllInteractorNSURLSessionImpl()
         downloadActivitiesInteractor.execute(type: Type.activity.rawValue) { (shops: Entities) in
+            SwiftSpinner.show(NSLocalizedString("Download_Activity_Image_Data_Message", comment: "Download_Activity_Image_Data_Message"))
             let downloadImagesInteractor: DownloadImagesInteractorImpl = DownloadImagesInteractorImpl()
             downloadImagesInteractor.execute(entities: shops, onSuccess: { (shops) in
+                SwiftSpinner.show(NSLocalizedString("Save_Activity_Data_Message", comment: "Save_Activity_Data_Message"))
                 let cacheInteractor = SaveAllInteractorImps()
                 cacheInteractor.execute(entities: shops, type: Type.activity.rawValue, context: self.context, onSuccess: { () in
-                    self.activityInd.stopAnimating()
+                    SwiftSpinner.hide()
                     SetExecutedOnceInteractorImpl().execute()
                     self.showButtons()
                 })
@@ -106,8 +110,6 @@ class MainViewController: UIViewController {
     
     
     func showButtons () {
-    
-        // swift:
         self.goToShopsButton.alpha = 0
         self.goToShopsButton.isHidden =  false
         UIView.animate(withDuration: 2) {

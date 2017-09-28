@@ -91,7 +91,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VP-uW-c8G">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VP-uW-c8G">
                                         <rect key="frame" x="8" y="257" width="304" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -157,9 +157,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zi8-xC-txQ">
-                                <rect key="frame" x="150" y="230" width="20" height="20"/>
-                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsg-sp-me9">
                                 <rect key="frame" x="75" y="323.5" width="170" height="74"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -198,10 +195,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2CY-c2-rxh" firstAttribute="trailing" secondItem="zsg-sp-me9" secondAttribute="trailing" constant="75" id="2P6-sf-ENN"/>
-                            <constraint firstItem="zi8-xC-txQ" firstAttribute="centerX" secondItem="GQG-ka-d6L" secondAttribute="centerX" id="Ea7-wI-KBx"/>
                             <constraint firstItem="HfJ-uW-B0D" firstAttribute="top" secondItem="2CY-c2-rxh" secondAttribute="top" constant="25" id="Hzg-mA-mI3"/>
                             <constraint firstItem="zsg-sp-me9" firstAttribute="top" secondItem="roD-Us-V97" secondAttribute="bottom" constant="8" id="Q7h-qN-M7n"/>
-                            <constraint firstItem="zi8-xC-txQ" firstAttribute="centerY" secondItem="GQG-ka-d6L" secondAttribute="centerY" id="Vrp-E9-0Kg"/>
                             <constraint firstItem="2CY-c2-rxh" firstAttribute="trailing" secondItem="roD-Us-V97" secondAttribute="trailing" constant="75" id="VzK-6Z-WBs"/>
                             <constraint firstItem="HfJ-uW-B0D" firstAttribute="centerX" secondItem="GQG-ka-d6L" secondAttribute="centerX" id="Zqd-gS-u7F"/>
                             <constraint firstItem="zsg-sp-me9" firstAttribute="top" secondItem="roD-Us-V97" secondAttribute="bottom" constant="8" id="bsM-Ys-ZuJ"/>
@@ -220,7 +215,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityInd" destination="zi8-xC-txQ" id="onl-vQ-vmy"/>
                         <outlet property="goToActivitiesButton" destination="zsg-sp-me9" id="ypr-FU-rhG"/>
                         <outlet property="goToShopsButton" destination="roD-Us-V97" id="qav-0m-XZL"/>
                         <outlet property="reloadButton" destination="b1P-4u-1Zk" id="5Kn-0E-Qle"/>
